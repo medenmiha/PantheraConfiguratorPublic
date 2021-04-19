@@ -1,1 +1,266 @@
-var _0x2ca8=['dispose','start','exteriorSection','getDelta','resize','modraPanthera','oranznaPanthera','toneMapping','1xJfolW','Clock','texture','innerWidth','setPixelRatio','setSize','generateMipmaps','addEventListener','145052LWPtdC','2mNFRqe','position','load','visible','https://threejs.org/examples/textures/equirectangular/','scene','PerspectiveCamera','set','lookAt','appendChild','clipAction','getObjectByName','outputEncoding','background','aspect','target','body','1583331ahyhFA','material','setPath','sRGBEncoding','maxDistance','566563MLrMwy','onclick','LoopOnce','ACESFilmicToneMapping','isMesh','49843HDNgVg','zelenaPanthera','getElementById','AnimationMixer','add','animations','Tween','venice_sunset_1k.hdr','seatsSection','slikaRdeca','div','Vector3','datoteke/pantherav12.gltf','534479DqiNyt','update','13sSTvuX','compileEquirectangularShader','Scene','UnsignedByteType','minDistance','PMREMGenerator','setDataType','168379kJCJnD','updateProjectionMatrix','innerHeight','devicePixelRatio','clampWhenFinished','fromEquirectangular','rdece-crni','WebGLRenderer','testIzbireSedezev','525827YATucm','loop','domElement','createElement','play','push'];var _0x4661=function(_0x54272b,_0x48d1df){_0x54272b=_0x54272b-0xff;var _0x2ca8f7=_0x2ca8[_0x54272b];return _0x2ca8f7;};var _0x3445d9=_0x4661;(function(_0x5806ef,_0x2c6544){var _0x212834=_0x4661;while(!![]){try{var _0x452dc2=parseInt(_0x212834(0x10a))*parseInt(_0x212834(0x10b))+-parseInt(_0x212834(0x121))+-parseInt(_0x212834(0x126))*parseInt(_0x212834(0x135))+-parseInt(_0x212834(0x13c))*parseInt(_0x212834(0x102))+parseInt(_0x212834(0x145))+-parseInt(_0x212834(0x133))+parseInt(_0x212834(0x11c));if(_0x452dc2===_0x2c6544)break;else _0x5806ef['push'](_0x5806ef['shift']());}catch(_0x5a1d24){_0x5806ef['push'](_0x5806ef['shift']());}}}(_0x2ca8,0x75a5a));import*as _0x2db7a6 from'https://threejs.org/build/three.module.js';import{OrbitControls}from'https://threejs.org/examples/jsm/controls/OrbitControls.js';import{GLTFLoader}from'https://threejs.org/examples/jsm/loaders/GLTFLoader.js';import{RGBELoader}from'https://threejs.org/examples/jsm/loaders/RGBELoader.js';import{RoughnessMipmapper}from'https://threejs.org/examples/jsm/utils/RoughnessMipmapper.js';var container,controls,controls1,camera,scene,renderer,mixer,clock,camera1,exteriorCamera,interiorCamera,selectedCamera,selectedControls,action1,action2,action3,clip1,clip2,clip3,cameraPosition={'x':0x0,'y':0x0,'z':0x0},pogoj=![],cameraLook=new _0x2db7a6[(_0x3445d9(0x131))](0x0,0x0,0x0),partsArray=[],modro_bez_Sedezi,rdece_crni_Sedezi;scene=new _0x2db7a6[(_0x3445d9(0x137))](),clock=new _0x2db7a6[(_0x3445d9(0x103))](),exteriorCamera=new _0x2db7a6[(_0x3445d9(0x111))](0x2d,window[_0x3445d9(0x105)]/window[_0x3445d9(0x13e)],0.25,0x14),interiorCamera=new _0x2db7a6['PerspectiveCamera'](0x4b,window[_0x3445d9(0x105)]/window[_0x3445d9(0x13e)],0.25,0x14),selectedCamera=exteriorCamera,container=document[_0x3445d9(0x148)](_0x3445d9(0x130)),document[_0x3445d9(0x11b)][_0x3445d9(0x114)](container),renderer=new _0x2db7a6[(_0x3445d9(0x143))]({'antialias':![]}),renderer[_0x3445d9(0x106)](window[_0x3445d9(0x13f)]),renderer[_0x3445d9(0x107)](window[_0x3445d9(0x105)],window[_0x3445d9(0x13e)]),renderer[_0x3445d9(0x101)]=_0x2db7a6[_0x3445d9(0x124)],renderer['toneMappingExposure']=0.8,renderer[_0x3445d9(0x117)]=_0x2db7a6[_0x3445d9(0x11f)],container[_0x3445d9(0x114)](renderer[_0x3445d9(0x147)]),controls=new OrbitControls(selectedCamera,renderer[_0x3445d9(0x147)]),controls[_0x3445d9(0x139)]=0x2,controls[_0x3445d9(0x120)]=0xa,controls[_0x3445d9(0x11a)]['set'](0x0,0x0,0x0),new RGBELoader()[_0x3445d9(0x13b)](_0x2db7a6[_0x3445d9(0x138)])[_0x3445d9(0x11e)](_0x3445d9(0x10f))[_0x3445d9(0x10d)](_0x3445d9(0x12d),function(_0x41049a){var _0x16100f=_0x3445d9,_0x2ee916=pmremGenerator[_0x16100f(0x141)](_0x41049a)[_0x16100f(0x104)];scene[_0x16100f(0x118)]=_0x2ee916,scene['environment']=_0x2ee916,_0x41049a[_0x16100f(0x14b)](),pmremGenerator[_0x16100f(0x14b)]();});var roughnessMipmapper=new RoughnessMipmapper(renderer),loader=new GLTFLoader();loader[_0x3445d9(0x10d)](_0x3445d9(0x132),function(_0x2c7586){var _0x42b54d=_0x3445d9;_0x2c7586[_0x42b54d(0x110)]['traverse'](function(_0x7cdaeb){var _0x44002f=_0x42b54d;partsArray[_0x44002f(0x14a)](_0x7cdaeb),_0x7cdaeb[_0x44002f(0x125)]&&roughnessMipmapper[_0x44002f(0x108)](_0x7cdaeb[_0x44002f(0x11d)]);}),scene[_0x42b54d(0x12a)](_0x2c7586[_0x42b54d(0x110)]),modro_bez_Sedezi=scene[_0x42b54d(0x116)]('modro-bez'),rdece_crni_Sedezi=scene[_0x42b54d(0x116)](_0x42b54d(0x142)),modro_bez_Sedezi[_0x42b54d(0x10e)]=![],rdece_crni_Sedezi[_0x42b54d(0x10e)]=!![],console['log'](partsArray['length']),roughnessMipmapper[_0x42b54d(0x14b)](),mixer=new _0x2db7a6[(_0x42b54d(0x129))](_0x2c7586[_0x42b54d(0x110)]),clip1=_0x2c7586[_0x42b54d(0x12b)][0x1],action1=mixer[_0x42b54d(0x115)](clip1),clip2=_0x2c7586[_0x42b54d(0x12b)][0x0],action2=mixer[_0x42b54d(0x115)](clip2),clip3=_0x2c7586[_0x42b54d(0x12b)][0x2],action3=mixer[_0x42b54d(0x115)](clip3);});var pmremGenerator=new _0x2db7a6[(_0x3445d9(0x13a))](renderer);pmremGenerator[_0x3445d9(0x136)](),controls[_0x3445d9(0x134)](),window[_0x3445d9(0x109)](_0x3445d9(0x14f),onWindowResize,![]);function onWindowResize(){var _0xfe7bd9=_0x3445d9;selectedCamera[_0xfe7bd9(0x119)]=window[_0xfe7bd9(0x105)]/window['innerHeight'],selectedCamera[_0xfe7bd9(0x13d)](),renderer[_0xfe7bd9(0x107)](window['innerWidth'],window[_0xfe7bd9(0x13e)]);}function animate(){var _0x513c12=_0x3445d9;requestAnimationFrame(animate);var _0x2bc9a2=clock[_0x513c12(0x14e)]();if(mixer)mixer[_0x513c12(0x134)](_0x2bc9a2);TWEEN[_0x513c12(0x134)](),console['log'](cameraPosition),pogoj&&(selectedCamera[_0x513c12(0x10c)][_0x513c12(0x112)](cameraPosition['x'],cameraPosition['y'],cameraPosition['z']),selectedCamera[_0x513c12(0x113)](cameraLook)),renderer['render'](scene,selectedCamera);}function exteriorConfiguration(){var _0x360ef6=_0x3445d9;pogoj=!![],selectedCamera=exteriorCamera,cameraLook['x']=0x0,cameraLook['y']=0x0,cameraLook['z']=0x2,controls['target'][_0x360ef6(0x112)](0x0,0x0,0x2);var _0x28d19f={'x':-0x5,'y':1.3,'z':-0x5};cameraPosition['x']=selectedCamera[_0x360ef6(0x10c)]['x'],cameraPosition['y']=selectedCamera[_0x360ef6(0x10c)]['y'],cameraPosition['z']=selectedCamera[_0x360ef6(0x10c)]['z'];const _0x1b1535=new TWEEN[(_0x360ef6(0x12c))](cameraPosition)['to'](_0x28d19f,0x7d0);_0x1b1535[_0x360ef6(0x14c)](),setTimeout(()=>{pogoj=![];},0x7d0);}function seatsConfiguration(){var _0x52e81b=_0x3445d9;action1[_0x52e81b(0x140)]=!![],action1[_0x52e81b(0x146)]=_0x2db7a6[_0x52e81b(0x123)],action1[_0x52e81b(0x149)](),action2[_0x52e81b(0x140)]=!![],action2['loop']=_0x2db7a6[_0x52e81b(0x123)],action2[_0x52e81b(0x149)](),action3[_0x52e81b(0x140)]=!![],action3[_0x52e81b(0x146)]=_0x2db7a6['LoopOnce'],action3['play'](),pogoj=!![];var _0x330e3f={'x':-0.73,'y':0.41,'z':2.1};cameraPosition['x']=selectedCamera[_0x52e81b(0x10c)]['x'],cameraPosition['y']=selectedCamera[_0x52e81b(0x10c)]['y'],cameraPosition['z']=selectedCamera['position']['z'];const _0x2ade76=new TWEEN['Tween'](cameraPosition)['to'](_0x330e3f,0x7d0);_0x2ade76['start'](),setTimeout(()=>{pogoj=![];},0x7d0),selectedCamera=interiorCamera,controls=new OrbitControls(selectedCamera,renderer[_0x52e81b(0x147)]),controls['minDistance']=0.5,controls[_0x52e81b(0x120)]=0x5,controls[_0x52e81b(0x11a)][_0x52e81b(0x112)](0x0,0x0,2.5),cameraLook['x']=0x0,cameraLook['y']=0x0,cameraLook['z']=2.5;}function interiorConfiguration(){var _0x421900=_0x3445d9;interiorCamera[_0x421900(0x10c)][_0x421900(0x112)](-0x1,0.6,-0x4);}document['getElementById'](_0x3445d9(0x14d))[_0x3445d9(0x122)]=function(){exteriorConfiguration();},document['getElementById'](_0x3445d9(0x12e))[_0x3445d9(0x122)]=function(){seatsConfiguration();},document['getElementById'](_0x3445d9(0x144))[_0x3445d9(0x122)]=function(){},document['getElementById']('slikaModra')[_0x3445d9(0x122)]=function(){var _0x14d566=_0x3445d9;modro_bez_Sedezi[_0x14d566(0x10e)]=!![],rdece_crni_Sedezi['visible']=![];},document[_0x3445d9(0x128)](_0x3445d9(0x12f))[_0x3445d9(0x122)]=function(){var _0x1eacf3=_0x3445d9;modro_bez_Sedezi['visible']=![],rdece_crni_Sedezi[_0x1eacf3(0x10e)]=!![];},document['getElementById'](_0x3445d9(0x100))[_0x3445d9(0x122)]=function(){var _0x3a7ca5=_0x3445d9;partsArray[0x3][_0x3a7ca5(0x10e)]=!![],partsArray[0x4][_0x3a7ca5(0x10e)]=![],partsArray[0x5][_0x3a7ca5(0x10e)]=![];},document[_0x3445d9(0x128)](_0x3445d9(0x127))[_0x3445d9(0x122)]=function(){var _0x22728d=_0x3445d9;partsArray[0x3][_0x22728d(0x10e)]=![],partsArray[0x4][_0x22728d(0x10e)]=!![],partsArray[0x5][_0x22728d(0x10e)]=![];},document[_0x3445d9(0x128)](_0x3445d9(0xff))[_0x3445d9(0x122)]=function(){var _0x51a0a6=_0x3445d9;partsArray[0x3]['visible']=![],partsArray[0x4][_0x51a0a6(0x10e)]=![],partsArray[0x5]['visible']=!![];},document['getElementById']('vijolicnaPanthera')['onclick']=function(){var _0x47da15=_0x3445d9;partsArray[0x3][_0x47da15(0x10e)]=![],partsArray[0x4][_0x47da15(0x10e)]=![],partsArray[0x5][_0x47da15(0x10e)]=![];},animate();
+import * as THREE from 'https://threejs.org/build/three.module.js';
+
+import { OrbitControls } from 'https://threejs.org/examples/jsm/controls/OrbitControls.js';
+import { GLTFLoader } from 'https://threejs.org/examples/jsm/loaders/GLTFLoader.js';
+import { RGBELoader } from 'https://threejs.org/examples/jsm/loaders/RGBELoader.js';
+import { RoughnessMipmapper } from 'https://threejs.org/examples/jsm/utils/RoughnessMipmapper.js';
+
+var container, controls, controls1;
+var camera, scene, renderer, mixer, clock, camera1;
+var exteriorCamera, interiorCamera, selectedCamera, selectedControls;
+var action1, action2, action3, clip1, clip2, clip3;
+var cameraPosition = { x : 0, y: 0, z: 0 };
+var pogoj = false;
+var cameraLook = new THREE.Vector3(0, 0, 0);  //
+
+var partsArray = []; //
+
+var modro_bez_Sedezi, rdece_crni_Sedezi;
+
+
+scene = new THREE.Scene();
+clock = new THREE.Clock();
+
+//CAMERAS
+exteriorCamera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.25, 20 );
+interiorCamera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.25, 20 );
+
+selectedCamera = exteriorCamera;
+
+container = document.createElement( 'div' );
+document.body.appendChild( container );
+
+renderer = new THREE.WebGLRenderer( { antialias: false } );  //true
+renderer.setPixelRatio( window.devicePixelRatio );
+renderer.setSize( window.innerWidth, window.innerHeight );
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 0.8;
+renderer.outputEncoding = THREE.sRGBEncoding;
+container.appendChild( renderer.domElement );
+
+controls = new OrbitControls( selectedCamera, renderer.domElement );
+controls.minDistance = 2;
+controls.maxDistance = 10
+controls.target.set( 0, 0, 0 );
+
+//exteriorConfiguration(); //Default start from outside configuration
+
+new RGBELoader()
+  .setDataType( THREE.UnsignedByteType )
+  .setPath( 'https://threejs.org/examples/textures/equirectangular/' )
+  .load( 'venice_sunset_1k.hdr', function ( texture ) {
+
+    var envMap = pmremGenerator.fromEquirectangular( texture ).texture;
+
+    scene.background = envMap;
+    scene.environment = envMap;
+
+    texture.dispose();
+    pmremGenerator.dispose();
+
+    // model
+
+    // use of RoughnessMipmapper is optional
+
+    } );
+
+var roughnessMipmapper = new RoughnessMipmapper( renderer );
+
+var loader = new GLTFLoader();
+loader.load( 'datoteke/pantherav12.gltf', function ( gltf ) {
+
+        //window.alert(camera.target);
+        //camera.position = gltf.cameras[0].position;
+
+    
+
+      gltf.scene.traverse( function ( child ) {
+
+        partsArray.push(child);  //
+
+        if ( child.isMesh ) {
+          roughnessMipmapper.generateMipmaps( child.material );                      
+          }
+        } );
+        
+        scene.add( gltf.scene );
+        
+        modro_bez_Sedezi = scene.getObjectByName("modro-bez");
+        rdece_crni_Sedezi = scene.getObjectByName("rdece-crni");
+	
+	modro_bez_Sedezi.visible = false;
+  	rdece_crni_Sedezi.visible = true;
+
+        console.log(partsArray.length) // 
+        roughnessMipmapper.dispose();
+        
+        mixer = new THREE.AnimationMixer( gltf.scene );
+        clip1 = gltf.animations[ 1 ];
+        action1 = mixer.clipAction(clip1);
+		
+		    clip2 = gltf.animations[ 0 ];
+		    action2 = mixer.clipAction(clip2);
+		        
+        clip3 = gltf.animations[ 2 ];
+		    action3 = mixer.clipAction(clip3);
+		       
+        
+      } );
+ 
+var pmremGenerator = new THREE.PMREMGenerator( renderer );
+pmremGenerator.compileEquirectangularShader();
+  
+controls.update();
+
+window.addEventListener( 'resize', onWindowResize, false );
+
+function onWindowResize() {
+
+  selectedCamera.aspect = window.innerWidth / window.innerHeight;
+  selectedCamera.updateProjectionMatrix();
+  renderer.setSize( window.innerWidth, window.innerHeight );
+
+}
+
+function animate() {
+  
+  requestAnimationFrame( animate );
+  
+  var delta = clock.getDelta();
+  
+  if ( mixer ) mixer.update( delta );
+	
+  TWEEN.update();
+
+  console.log(cameraPosition);
+
+  if ( pogoj ){
+     selectedCamera.position.set( cameraPosition.x, cameraPosition.y, cameraPosition.z );
+     selectedCamera.lookAt(cameraLook);
+  }
+  renderer.render( scene, selectedCamera );
+}
+
+function exteriorConfiguration(){
+
+  pogoj = true;
+  selectedCamera = exteriorCamera;
+
+  cameraLook.x=0;
+  cameraLook.y=0;
+  cameraLook.z=2;
+
+  controls.target.set( 0, 0, 2 );
+
+  var target2 =  { x : -5, y:1.3, z: -5 };
+  cameraPosition.x = selectedCamera.position.x
+  cameraPosition.y = selectedCamera.position.y
+  cameraPosition.z = selectedCamera.position.z
+
+  const tween = new TWEEN.Tween(cameraPosition ).to(target2, 2000); //
+  tween.start();
+  setTimeout(() => {
+    pogoj = false;
+  }, 2000)
+   
+}
+
+function seatsConfiguration(){
+
+  action1.clampWhenFinished = true;
+  action1.loop = THREE.LoopOnce;
+  action1.play();
+
+  action2.clampWhenFinished = true;
+  action2.loop = THREE.LoopOnce;
+  action2.play();
+
+  action3.clampWhenFinished = true;
+  action3.loop = THREE.LoopOnce;
+  action3.play();
+
+  pogoj = true;
+ 
+
+  var target1 =  { x : -0.73, y: 0.41, z: 2.1 };
+  cameraPosition.x = selectedCamera.position.x
+  cameraPosition.y = selectedCamera.position.y
+  cameraPosition.z = selectedCamera.position.z
+  const tween = new TWEEN.Tween(cameraPosition ).to(target1, 2000); //
+  tween.start();
+  setTimeout(() => {
+    pogoj = false;
+  }, 2000)
+
+  selectedCamera = interiorCamera;
+  controls = new OrbitControls( selectedCamera, renderer.domElement );
+  controls.minDistance = 0.5;
+  controls.maxDistance = 5
+  controls.target.set( 0, 0, 2.5);
+	
+  cameraLook.x=0;
+  cameraLook.y=0;
+  cameraLook.z=2.5;
+  
+}
+
+
+//Trenutno za rezervo
+function interiorConfiguration(){
+  interiorCamera.position.set( - 1, 0.6, -4 );
+}
+
+//NAVIGATION BUTTONS
+
+document.getElementById("exteriorSection").onclick = function() {
+  exteriorConfiguration();
+};
+
+document.getElementById("seatsSection").onclick = function() {
+  seatsConfiguration();
+};
+
+document.getElementById("testIzbireSedezev").onclick = function() {
+
+};
+
+document.getElementById("slikaModra").onclick = function() {
+  modro_bez_Sedezi.visible = true;
+  rdece_crni_Sedezi.visible = false;
+};
+
+document.getElementById("slikaRdeca").onclick = function() {
+  modro_bez_Sedezi.visible = false;
+  rdece_crni_Sedezi.visible = true;
+};
+
+document.getElementById("oranznaPanthera").onclick = function() {
+  partsArray[3].visible = true; //skinPanthera4  
+  partsArray[4].visible = false; //skinPanthera3
+  partsArray[5].visible = false; //skinPanthera2
+};
+
+document.getElementById("zelenaPanthera").onclick = function() {
+  partsArray[3].visible = false; //skinPanthera4  
+  partsArray[4].visible = true; //skinPanthera3
+  partsArray[5].visible = false; //skinPanthera2
+};
+
+document.getElementById("modraPanthera").onclick = function() {
+  partsArray[3].visible = false; //skinPanthera4  
+  partsArray[4].visible = false; //skinPanthera3
+  partsArray[5].visible = true; //skinPanthera2
+};
+
+document.getElementById("vijolicnaPanthera").onclick = function() {
+  partsArray[3].visible = false; //skinPanthera4  
+  partsArray[4].visible = false; //skinPanthera3
+  partsArray[5].visible = false; //skinPanthera2
+};
+
+animate();
+
+
+  //var target =  { x : 0, y: 0, z: 0 };
+  //const tween = new TWEEN.Tween(position).to(target, 2000); //
+  //tween.start();
