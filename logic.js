@@ -85,11 +85,11 @@ loader.load( 'datoteke/pantherav12.gltf', function ( gltf ) {
         
         scene.add( gltf.scene );
         
-        modro_bez_Sedezi = scene.getObjectByName("modro-bez");
-        rdece_crni_Sedezi = scene.getObjectByName("rdece-crni");
+        //modro_bez_Sedezi = scene.getObjectByName("modro-bez");
+        //rdece_crni_Sedezi = scene.getObjectByName("rdece-crni");
 	
-	modro_bez_Sedezi.visible = false;
-  	rdece_crni_Sedezi.visible = true;
+	//modro_bez_Sedezi.visible = false;
+  	//rdece_crni_Sedezi.visible = true;
 
         console.log(partsArray.length) // 
         roughnessMipmapper.dispose();
@@ -225,13 +225,13 @@ document.getElementById("testIzbireSedezev").onclick = function() {
 };
 
 document.getElementById("slikaModra").onclick = function() {
-  modro_bez_Sedezi.visible = true;
-  rdece_crni_Sedezi.visible = false;
+  //modro_bez_Sedezi.visible = true;
+  //rdece_crni_Sedezi.visible = false;
 };
 
 document.getElementById("slikaRdeca").onclick = function() {
-  modro_bez_Sedezi.visible = false;
-  rdece_crni_Sedezi.visible = true;
+  //modro_bez_Sedezi.visible = false;
+  //rdece_crni_Sedezi.visible = true;
 };
 
 document.getElementById("oranznaPanthera").onclick = function() {
