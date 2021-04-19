@@ -132,7 +132,7 @@ function animate() {
 	
   TWEEN.update();
 
-  console.log(cameraPosition);
+  //console.log(cameraPosition);
 
   if ( pogoj ){
      selectedCamera.position.set( cameraPosition.x, cameraPosition.y, cameraPosition.z );
