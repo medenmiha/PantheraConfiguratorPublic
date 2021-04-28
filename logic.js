@@ -67,7 +67,7 @@ new RGBELoader()
 var roughnessMipmapper = new RoughnessMipmapper( renderer );
 
 var loader = new GLTFLoader();
-loader.load( 'datoteke/pantherav12.gltf', function ( gltf ) {
+loader.load( 'datoteke/Pantherav12.gltf', function ( gltf ) {
 
         //window.alert(camera.target);
         //camera.position = gltf.cameras[0].position;
