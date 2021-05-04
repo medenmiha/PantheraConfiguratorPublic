@@ -224,12 +224,22 @@ document.getElementById("testIzbireSedezev").onclick = function() {
 
 };
 
-document.getElementById("slikaModra").onclick = function() {
+document.getElementById("slikaZadnjiSedezi_modro-crni").onclick = function() {
   //modro_bez_Sedezi.visible = true;
   //rdece_crni_Sedezi.visible = false;
 };
 
-document.getElementById("slikaRdeca").onclick = function() {
+document.getElementById("slikaZadnjiSedezi_oranzno-sivo-beli").onclick = function() {
+  //modro_bez_Sedezi.visible = false;
+  //rdece_crni_Sedezi.visible = true;
+};
+
+document.getElementById("slikaZadnjiSedezi_rdece-crni").onclick = function() {
+  //modro_bez_Sedezi.visible = false;
+  //rdece_crni_Sedezi.visible = true;
+};
+
+document.getElementById("slikaZadnjiSedezi_zeleno-crni").onclick = function() {
   //modro_bez_Sedezi.visible = false;
   //rdece_crni_Sedezi.visible = true;
 };
