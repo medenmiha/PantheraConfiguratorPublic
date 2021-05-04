@@ -15,7 +15,7 @@ var cameraLook = new THREE.Vector3(0, 0, 0);  //
 
 var partsArray = []; //
 
-var modro_bez_Sedezi, rdece_crni_Sedezi;
+var DesniPrednjiSedez_modro_crni, DesniPrednjiSedez_oranzno_sivo_beli, DesniPrednjiSedez_zeleno_crni;
 
 
 scene = new THREE.Scene();
