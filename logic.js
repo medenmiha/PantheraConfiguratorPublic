@@ -85,8 +85,8 @@ loader.load( 'datoteke/PantheraBaked.gltf', function ( gltf ) {
         
         scene.add( gltf.scene );
         
-        //modro_bez_Sedezi = scene.getObjectByName("modro-bez");
-        //rdece_crni_Sedezi = scene.getObjectByName("rdece-crni");
+        modro_bez_Sedezi = scene.getObjectByName("DesniPrednjiSedez_modro-crni");
+        rdece_crni_Sedezi = scene.getObjectByName("DesniPrednjiSedez_oranzno-sivo-beli");
 	
 	//modro_bez_Sedezi.visible = false;
   	//rdece_crni_Sedezi.visible = true;
