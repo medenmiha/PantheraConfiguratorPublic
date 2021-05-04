@@ -67,7 +67,7 @@ new RGBELoader()
 var roughnessMipmapper = new RoughnessMipmapper( renderer );
 
 var loader = new GLTFLoader();
-loader.load( 'datoteke/PantheraBaked.gltf', function ( gltf ) {
+loader.load( 'datoteke/PantheraFinalKomad-Baked - brezProblema.gltf', function ( gltf ) {
 
         //window.alert(camera.target);
         //camera.position = gltf.cameras[0].position;
