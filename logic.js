@@ -235,6 +235,8 @@ document.getElementById("slikaZadnjiSedezi_modro-crni").onclick = function() {
   DesniPrednjiSedez_zeleno_crni.visible = false;
 
   LeviPrednjiSedez_modro_crni.visible = true;
+  LeviPrednjiSedez_oranzno_sivo_beli.visible = false;
+  LeviPrednjiSedez_zeleno_crni.visible = false;
 };
 
 document.getElementById("slikaZadnjiSedezi_oranzno-sivo-beli").onclick = function() {
@@ -243,6 +245,8 @@ document.getElementById("slikaZadnjiSedezi_oranzno-sivo-beli").onclick = functio
   DesniPrednjiSedez_zeleno_crni.visible = false;
 
   LeviPrednjiSedez_modro_crni.visible = false;
+  LeviPrednjiSedez_oranzno_sivo_beli.visible = true;
+  LeviPrednjiSedez_zeleno_crni.visible = false;
 };
 
 document.getElementById("slikaZadnjiSedezi_rdece-crni").onclick = function() {
@@ -251,6 +255,8 @@ document.getElementById("slikaZadnjiSedezi_rdece-crni").onclick = function() {
   DesniPrednjiSedez_zeleno_crni.visible = false;
 
   LeviPrednjiSedez_modro_crni.visible = false;
+  LeviPrednjiSedez_oranzno_sivo_beli.visible = false;
+  LeviPrednjiSedez_zeleno_crni.visible = false;
 };
 
 document.getElementById("slikaZadnjiSedezi_zeleno-crni").onclick = function() {
@@ -259,6 +265,8 @@ document.getElementById("slikaZadnjiSedezi_zeleno-crni").onclick = function() {
   DesniPrednjiSedez_zeleno_crni.visible = true;
 
   LeviPrednjiSedez_modro_crni.visible = false;
+  LeviPrednjiSedez_oranzno_sivo_beli.visible = false;
+  LeviPrednjiSedez_zeleno_crni.visible = true;
 };
 
 document.getElementById("oranznaPanthera").onclick = function() {
