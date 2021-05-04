@@ -99,9 +99,23 @@ loader.load( 'datoteke/PantheraFinalKomad-Baked - brezProblema.gltf', function (
         ZadnjiSedezi_oranzno_sivo_beli = scene.getObjectByName("ZadnjiSedezi_oranzno-sivo-beli");
         ZadnjiSedezi_rdece_crni = scene.getObjectByName("ZadnjiSedezi_rdece-crni");
         ZadnjiSedezi_zeleno_crni = scene.getObjectByName("ZadnjiSedezi_zeleno-crni");
-	
-	//modro_bez_Sedezi.visible = false;
-  	//rdece_crni_Sedezi.visible = true;
+
+
+        DesniPrednjiSedez_modro_crni.visible = false;
+        DesniPrednjiSedez_oranzno_sivo_beli.visible = false;
+        DesniPrednjiSedez_rdece_crni.visible = false;
+        DesniPrednjiSedez_zeleno_crni.visible = true;
+
+        LeviPrednjiSedez_modro_crni.visible = false;
+        LeviPrednjiSedez_oranzno_sivo_beli.visible = false;
+        LeviPrednjiSedez_rdece_crni.visible = false;
+        LeviPrednjiSedez_zeleno_crni.visible = true;
+
+        ZadnjiSedezi_modro_crni.visible = false;
+        ZadnjiSedezi_oranzno_sivo_beli.visible = false;
+        ZadnjiSedezi_rdece_crni.visible = false;
+        ZadnjiSedezi_zeleno_crni.visible = true;
+
 
         console.log(partsArray.length) // 
         roughnessMipmapper.dispose();
