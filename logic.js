@@ -229,45 +229,41 @@ document.getElementById("testIzbireSedezev").onclick = function() {
 document.getElementById("slikaZadnjiSedezi_modro-crni").onclick = function() {
   DesniPrednjiSedez_modro_crni.visible = true;
   DesniPrednjiSedez_oranzno_sivo_beli.visible = false;
+  DesniPrednjiSedez_zeleno_crni.visible = false;
 };
 
 document.getElementById("slikaZadnjiSedezi_oranzno-sivo-beli").onclick = function() {
   DesniPrednjiSedez_modro_crni.visible = false;
   DesniPrednjiSedez_oranzno_sivo_beli.visible = true;
+  DesniPrednjiSedez_zeleno_crni.visible = false;
 };
 
 document.getElementById("slikaZadnjiSedezi_rdece-crni").onclick = function() {
   DesniPrednjiSedez_modro_crni.visible = false;
   DesniPrednjiSedez_oranzno_sivo_beli.visible = false;
+  DesniPrednjiSedez_zeleno_crni.visible = false;
 };
 
 document.getElementById("slikaZadnjiSedezi_zeleno-crni").onclick = function() {
   DesniPrednjiSedez_modro_crni.visible = false;
   DesniPrednjiSedez_oranzno_sivo_beli.visible = false;
+  DesniPrednjiSedez_zeleno_crni.visible = true;
 };
 
 document.getElementById("oranznaPanthera").onclick = function() {
-  partsArray[3].visible = true; //skinPanthera4  
-  partsArray[4].visible = false; //skinPanthera3
-  partsArray[5].visible = false; //skinPanthera2
+ 
 };
 
 document.getElementById("zelenaPanthera").onclick = function() {
-  partsArray[3].visible = false; //skinPanthera4  
-  partsArray[4].visible = true; //skinPanthera3
-  partsArray[5].visible = false; //skinPanthera2
+  
 };
 
 document.getElementById("modraPanthera").onclick = function() {
-  partsArray[3].visible = false; //skinPanthera4  
-  partsArray[4].visible = false; //skinPanthera3
-  partsArray[5].visible = true; //skinPanthera2
+  
 };
 
 document.getElementById("vijolicnaPanthera").onclick = function() {
-  partsArray[3].visible = false; //skinPanthera4  
-  partsArray[4].visible = false; //skinPanthera3
-  partsArray[5].visible = false; //skinPanthera2
+
 };
 
 animate();
