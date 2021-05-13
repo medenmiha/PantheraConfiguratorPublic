@@ -43,19 +43,7 @@ controls.minDistance = 2;
 controls.maxDistance = 10
 controls.target.set( 0, 0, 0 );
 
-
-$(document).ready(function() {
-  $('#fullpage').fullpage({
-    navigation: true,
-    navigationPosition: 'right',
-    navigationTooltips: ['section1', 'section2','section3','section4',],
-    showActiveTooltip: true,
-    slidesNavigation: true,
-      slidesNavPosition: 'bottom',
-    controlArrows:false,
-  });
-});
-
+//exteriorConfiguration(); //Default start from outside configuration
 
 new RGBELoader()
   .setDataType( THREE.UnsignedByteType )
