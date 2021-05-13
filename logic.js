@@ -97,8 +97,8 @@ function ( gltf ) {
 		  },
 
       function ( xhr ) {
-
-        console.log(xhr);
+        console.log(xhr.loaded);
+        
     
       }
       
