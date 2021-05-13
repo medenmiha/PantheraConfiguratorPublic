@@ -97,11 +97,7 @@ function ( gltf ) {
 		  },
 
       function ( xhr ) {
-
-        console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
-        console.log(xhr.loaded, xhr.total);
-        console.log(xhr);
-    
+        console.log( xhr.total);
       }
       
       
