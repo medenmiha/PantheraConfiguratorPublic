@@ -45,11 +45,6 @@ controls.target.set( 0, 0, 0 );
 
 //exteriorConfiguration(); //Default start from outside configuration
 
-document.getElementById('demosMenu').addEventListener('change', function(e){
-  var dropdown = document.getElementById('demosMenu');
-  window.location.href = dropdown.options[dropdown.selectedIndex].getAttribute('id') + '.html';
-});
-
 new RGBELoader()
   .setDataType( THREE.UnsignedByteType )
   .setPath( 'https://threejs.org/examples/textures/equirectangular/' )
