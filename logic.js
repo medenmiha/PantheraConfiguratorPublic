@@ -84,37 +84,6 @@ loader.load( 'datoteke/PantheraFinalKomad-Baked - brezProblema.gltf', function (
         } );
         
         scene.add( gltf.scene );
-        
-        DesniPrednjiSedez_modro_crni = scene.getObjectByName("DesniPrednjiSedez_modro-crni");
-        DesniPrednjiSedez_oranzno_sivo_beli = scene.getObjectByName("DesniPrednjiSedez_oranzno-sivo-beli");
-        DesniPrednjiSedez_rdece_crni = scene.getObjectByName("DesniPrednjiSedez_rdece-crni");
-        DesniPrednjiSedez_zeleno_crni = scene.getObjectByName("DesniPrednjiSedez_zeleno-crni");
-
-        LeviPrednjiSedez_modro_crni = scene.getObjectByName("LeviPrednjiSedez_modro-crni");
-        LeviPrednjiSedez_oranzno_sivo_beli = scene.getObjectByName("LeviPrednjiSedez_oranzno-sivo-beli");
-        LeviPrednjiSedez_rdece_crni = scene.getObjectByName("LeviPrednjiSedez_rdece-crni");
-        LeviPrednjiSedez_zeleno_crni = scene.getObjectByName("LeviPrednjiSedez_zeleno-crni");
-
-        ZadnjiSedezi_modro_crni = scene.getObjectByName("ZadnjiSedezi_modro-crni");
-        ZadnjiSedezi_oranzno_sivo_beli = scene.getObjectByName("ZadnjiSedezi_oranzno-sivo-beli");
-        ZadnjiSedezi_rdece_crni = scene.getObjectByName("ZadnjiSedezi_rdece-crni");
-        ZadnjiSedezi_zeleno_crni = scene.getObjectByName("ZadnjiSedezi_zeleno-crni");
-
-
-        DesniPrednjiSedez_modro_crni.visible = false;
-        DesniPrednjiSedez_oranzno_sivo_beli.visible = false;
-        DesniPrednjiSedez_rdece_crni.visible = false;
-        DesniPrednjiSedez_zeleno_crni.visible = true;
-
-        LeviPrednjiSedez_modro_crni.visible = false;
-        LeviPrednjiSedez_oranzno_sivo_beli.visible = false;
-        LeviPrednjiSedez_rdece_crni.visible = false;
-        LeviPrednjiSedez_zeleno_crni.visible = true;
-
-        ZadnjiSedezi_modro_crni.visible = false;
-        ZadnjiSedezi_oranzno_sivo_beli.visible = false;
-        ZadnjiSedezi_rdece_crni.visible = false;
-        ZadnjiSedezi_zeleno_crni.visible = true;
 
 
         //console.log(partsArray.length) // 
@@ -165,6 +134,32 @@ function animate() {
      selectedCamera.lookAt(cameraLook);
   }
   renderer.render( scene, selectedCamera );
+}
+
+function introConfiguration(){
+
+  pogoj = true;
+  selectedCamera = exteriorCamera;
+
+  cameraLook.x=0;
+  cameraLook.y=0;
+  cameraLook.z=2;
+
+  controls.target.set( 0, 0, 2 );
+
+  var target2 =  { x : -5, y:1.3, z: -5 };
+  cameraPosition.x = selectedCamera.position.x
+  cameraPosition.y = selectedCamera.position.y
+  cameraPosition.z = selectedCamera.position.z
+
+  const tween = new TWEEN.Tween(cameraPosition ).to(target2, 2000); //
+  selectedCamera.aspect = window.innerWidth / window.innerHeight;
+  selectedCamera.updateProjectionMatrix();
+  tween.start();
+  setTimeout(() => {
+    pogoj = false;
+  }, 2000)
+   
 }
 
 function exteriorConfiguration(){
@@ -255,71 +250,19 @@ document.getElementById("testIzbireSedezev").onclick = function() {
 };
 
 document.getElementById("slikaZadnjiSedezi_modro-crni").onclick = function() {
-  DesniPrednjiSedez_modro_crni.visible = true;
-  DesniPrednjiSedez_oranzno_sivo_beli.visible = false;
-  DesniPrednjiSedez_rdece_crni.visible = false;
-  DesniPrednjiSedez_zeleno_crni.visible = false;
-
-  LeviPrednjiSedez_modro_crni.visible = true;
-  LeviPrednjiSedez_oranzno_sivo_beli.visible = false;
-  LeviPrednjiSedez_rdece_crni.visible = false;
-  LeviPrednjiSedez_zeleno_crni.visible = false;
-
-  ZadnjiSedezi_modro_crni.visible = true;
-  ZadnjiSedezi_oranzno_sivo_beli.visible = false;
-  ZadnjiSedezi_rdece_crni.visible = false;
-  ZadnjiSedezi_zeleno_crni.visible = false;
+  
 };
 
 document.getElementById("slikaZadnjiSedezi_oranzno-sivo-beli").onclick = function() {
-  DesniPrednjiSedez_modro_crni.visible = false;
-  DesniPrednjiSedez_oranzno_sivo_beli.visible = true;
-  DesniPrednjiSedez_rdece_crni.visible = false;
-  DesniPrednjiSedez_zeleno_crni.visible = false;
-
-  LeviPrednjiSedez_modro_crni.visible = false;
-  LeviPrednjiSedez_oranzno_sivo_beli.visible = true;
-  LeviPrednjiSedez_rdece_crni.visible = false;
-  LeviPrednjiSedez_zeleno_crni.visible = false;
-
-  ZadnjiSedezi_modro_crni.visible = false;
-  ZadnjiSedezi_oranzno_sivo_beli.visible = true;
-  ZadnjiSedezi_rdece_crni.visible = false;
-  ZadnjiSedezi_zeleno_crni.visible = false;
+  
 };
 
 document.getElementById("slikaZadnjiSedezi_rdece-crni").onclick = function() {
-  DesniPrednjiSedez_modro_crni.visible = false;
-  DesniPrednjiSedez_oranzno_sivo_beli.visible = false;
-  DesniPrednjiSedez_rdece_crni.visible = true;
-  DesniPrednjiSedez_zeleno_crni.visible = false;
-
-  LeviPrednjiSedez_modro_crni.visible = false;
-  LeviPrednjiSedez_oranzno_sivo_beli.visible = false;
-  LeviPrednjiSedez_rdece_crni.visible = true;
-  LeviPrednjiSedez_zeleno_crni.visible = false;
-
-  ZadnjiSedezi_modro_crni.visible = false;
-  ZadnjiSedezi_oranzno_sivo_beli.visible = false;
-  ZadnjiSedezi_rdece_crni.visible = true;
-  ZadnjiSedezi_zeleno_crni.visible = false;
+  
 };
 
 document.getElementById("slikaZadnjiSedezi_zeleno-crni").onclick = function() {
-  DesniPrednjiSedez_modro_crni.visible = false;
-  DesniPrednjiSedez_oranzno_sivo_beli.visible = false;
-  DesniPrednjiSedez_rdece_crni.visible = false;
-  DesniPrednjiSedez_zeleno_crni.visible = true;
-
-  LeviPrednjiSedez_modro_crni.visible = false;
-  LeviPrednjiSedez_oranzno_sivo_beli.visible = false;
-  LeviPrednjiSedez_rdece_crni.visible = false;
-  LeviPrednjiSedez_zeleno_crni.visible = true;
-
-  ZadnjiSedezi_modro_crni.visible = false;
-  ZadnjiSedezi_oranzno_sivo_beli.visible = false;
-  ZadnjiSedezi_rdece_crni.visible = false;
-  ZadnjiSedezi_zeleno_crni.visible = true;
+  
 };
 
 document.getElementById("oranznaPanthera").onclick = function() {
