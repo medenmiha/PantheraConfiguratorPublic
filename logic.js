@@ -41,7 +41,7 @@ container.appendChild( renderer.domElement );
 controls = new OrbitControls( selectedCamera, renderer.domElement );
 controls.minDistance = 2;
 controls.maxDistance = 10
-controls.target.set( 0, 0, 0 );
+controls.target.set( 0, 0, 2.5 );
 
 //exteriorConfiguration(); //Default start from outside configuration
 
