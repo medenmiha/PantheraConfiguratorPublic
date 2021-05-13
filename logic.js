@@ -97,7 +97,9 @@ function ( gltf ) {
 		  },
 
       function ( xhr ) {
-        console.log( xhr.total);
+
+        console.log(xhr);
+    
       }
       
       
