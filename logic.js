@@ -69,11 +69,6 @@ var roughnessMipmapper = new RoughnessMipmapper( renderer );
 var loader = new GLTFLoader();
 loader.load( 'datoteke/PantheraFinalKomad-Baked - brezProblema.gltf', function ( gltf ) {
 
-        //window.alert(camera.target);
-        //camera.position = gltf.cameras[0].position;
-
-    
-
       gltf.scene.traverse( function ( child ) {
 
         partsArray.push(child);  //
@@ -100,7 +95,13 @@ loader.load( 'datoteke/PantheraFinalKomad-Baked - brezProblema.gltf', function (
 		    action3 = mixer.clipAction(clip3);
 		       
         
-      } );
+      }, 
+      
+      function ( xhr ) {
+
+        console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+    
+      });
  
 var pmremGenerator = new THREE.PMREMGenerator( renderer );
 pmremGenerator.compileEquirectangularShader();
