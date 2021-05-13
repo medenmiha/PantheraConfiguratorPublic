@@ -9,9 +9,9 @@ var container, controls, controls1;
 var camera, scene, renderer, mixer, clock, camera1;
 var exteriorCamera, interiorCamera, selectedCamera, selectedControls;
 var action1, action2, action3, clip1, clip2, clip3;
-var cameraPosition = { x : 0, y: 0, z: 0 };
+var cameraPosition = { x : -5, y:1.3, z: -5 };
 var pogoj = false;
-var cameraLook = new THREE.Vector3(0, 0, 0);  //
+var cameraLook = new THREE.Vector3(0, 0, 2);  //
 
 var partsArray = []; //
 
@@ -97,8 +97,7 @@ function ( gltf ) {
 		  },
 
       function ( xhr ) {
-        console.log(xhr.loaded);
-        
+        console.log(xhr.loaded); //ne zazna koncne velicine datoteke zato samo to zaenkrat
     
       }
       
