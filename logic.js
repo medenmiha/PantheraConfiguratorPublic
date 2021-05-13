@@ -9,9 +9,9 @@ var container, controls, controls1;
 var camera, scene, renderer, mixer, clock, camera1;
 var exteriorCamera, interiorCamera, selectedCamera, selectedControls;
 var action1, action2, action3, clip1, clip2, clip3;
-var cameraPosition = { x : -5, y:1.3, z: -5 };
+var cameraPosition = { x : 0, y: 0, z: 0 };
 var pogoj = false;
-var cameraLook = new THREE.Vector3(0, 0, 2);  //
+var cameraLook = new THREE.Vector3(0, 0, 0);  //
 
 var partsArray = []; //
 
@@ -41,7 +41,7 @@ container.appendChild( renderer.domElement );
 controls = new OrbitControls( selectedCamera, renderer.domElement );
 controls.minDistance = 2;
 controls.maxDistance = 10
-controls.target.set( 0, 0, 2.5 );
+controls.target.set( 0, 0, 0 );
 
 //exteriorConfiguration(); //Default start from outside configuration
 
@@ -98,6 +98,7 @@ function ( gltf ) {
 
       function ( xhr ) {
         console.log(xhr.loaded); //ne zazna koncne velicine datoteke zato samo to zaenkrat
+        
     
       }
       
@@ -283,6 +284,7 @@ document.getElementById("vijolicnaPanthera").onclick = function() {
 
 };
 
+introConfiguration()
 animate();
 
 
