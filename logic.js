@@ -47,8 +47,8 @@ controls.target.set( 0, 0, 0 );
 
 new RGBELoader()
   .setDataType( THREE.UnsignedByteType )
-  .setPath( 'https://download.polyhaven.com/HDRIs/2k/' )
-  .load( 'abandoned_tank_farm_04_2k.hdr', function ( texture ) {
+  .setPath( 'https://threejs.org/examples/textures/equirectangular/' )
+  .load( 'venice_sunset_1k.hdr', function ( texture ) {
 
     var envMap = pmremGenerator.fromEquirectangular( texture ).texture;
 
