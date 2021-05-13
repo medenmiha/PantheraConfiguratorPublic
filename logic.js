@@ -95,10 +95,12 @@ function ( gltf ) {
         clip3 = gltf.animations[ 2 ];
 		    action3 = mixer.clipAction(clip3);
 		  },
-      
+
       function ( xhr ) {
 
         console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+        console.log(xhr.loaded, xhr.total);
+        console.log(xhr);
     
       }
       
