@@ -117,7 +117,7 @@ loader.load( 'datoteke/PantheraFinalKomad-Baked - brezProblema.gltf', function (
         ZadnjiSedezi_zeleno_crni.visible = true;
 
 
-        console.log(partsArray.length) // 
+        //console.log(partsArray.length) // 
         roughnessMipmapper.dispose();
         
         mixer = new THREE.AnimationMixer( gltf.scene );
@@ -184,6 +184,8 @@ function exteriorConfiguration(){
   cameraPosition.z = selectedCamera.position.z
 
   const tween = new TWEEN.Tween(cameraPosition ).to(target2, 2000); //
+  selectedCamera.aspect = window.innerWidth / window.innerHeight;
+  selectedCamera.updateProjectionMatrix();
   tween.start();
   setTimeout(() => {
     pogoj = false;
@@ -213,6 +215,8 @@ function seatsConfiguration(){
   cameraPosition.y = selectedCamera.position.y
   cameraPosition.z = selectedCamera.position.z
   const tween = new TWEEN.Tween(cameraPosition ).to(target1, 2000); //
+  selectedCamera.aspect = window.innerWidth / window.innerHeight;
+  selectedCamera.updateProjectionMatrix();
   tween.start();
   setTimeout(() => {
     pogoj = false;
