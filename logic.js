@@ -248,42 +248,6 @@ document.getElementById("seatsSection").onclick = function() {
   seatsConfiguration();
 };
 
-document.getElementById("testIzbireSedezev").onclick = function() {
-
-};
-
-document.getElementById("slikaZadnjiSedezi_modro-crni").onclick = function() {
-  
-};
-
-document.getElementById("slikaZadnjiSedezi_oranzno-sivo-beli").onclick = function() {
-  
-};
-
-document.getElementById("slikaZadnjiSedezi_rdece-crni").onclick = function() {
-  
-};
-
-document.getElementById("slikaZadnjiSedezi_zeleno-crni").onclick = function() {
-  
-};
-
-document.getElementById("oranznaPanthera").onclick = function() {
- 
-};
-
-document.getElementById("zelenaPanthera").onclick = function() {
-  
-};
-
-document.getElementById("modraPanthera").onclick = function() {
-  
-};
-
-document.getElementById("vijolicnaPanthera").onclick = function() {
-
-};
-
 introConfiguration()
 animate();
 
