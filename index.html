@@ -4,40 +4,82 @@
         <title>Miha Meden</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-        <link type="text/css" rel="stylesheet" href="main.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://raw.githubusercontent.com/alvarotrigo/fullPage.js/master/src/fullpage.css" />
-
+        <link type="text/css" rel="stylesheet" href="main.css">                                                                                        
     </head>
+ 
+    <!-- rabim Sidebar with Accordion
+        https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_examples_mail
+        https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav_full
+        https://www.w3schools.com/css/tryit.asp?filename=tryresponsive_breakpoints
+ -->
     
     <body>
-        <div id="fullpage">
-            <div class="section" id="section1">section1</div>
-            <div class="section" id="section2">section2</div>
-            <div class="section" id="section3">section3</div>
-            <div class="section" id="section4">section4</div>
+        <div class="first-row">
+            <h1>Panthera configurator</h1>
+
+            <button id="exteriorSection" class="accordion">Exterior</button>
+            <div class="panel">
+              <div class="row">
+                <div class="column">
+                  <img id="zelenaPanthera" src="slike/zelena.jpg" alt="Snow" style="width:100%">
+                </div>
+                <div class="column">
+                  <img id="vijolicnaPanthera" src="slike/vijolicna.jpg" alt="Snow" style="width:100%">
+                </div>
+                <div class="column">
+                  <img id="modraPanthera" src="slike/modra.jpg" alt="Snow" style="width:100%">
+                </div>
+                <div class="column">
+                  <img id="oranznaPanthera" src="slike/oranzna.jpg" alt="Snow" style="width:100%">
+                </div>
+              </div> 
+            </div>
+
+            <button id= "seatsSection" class="accordion">Seats</button>
+            <div class="panel">
+                <div class="row">
+                    <div class="column">
+                      <img id="slikaZadnjiSedezi_modro-crni" src="slike/ZadnjiSedezi_modro-crni.jpg" alt="Snow" style="width:100%">
+                    </div>
+                    <div class="column">
+                      <img id="slikaZadnjiSedezi_oranzno-sivo-beli" src="slike/ZadnjiSedezi_oranzno-sivo-beli.jpg" alt="Snow" style="width:100%">
+                    </div>
+                    <div class="column">
+                      <img id="slikaZadnjiSedezi_rdece-crni" src="slike/ZadnjiSedezi_rdece-crni.jpg" alt="Snow" style="width:100%">
+                    </div>
+                    <div class="column">
+                      <img id="slikaZadnjiSedezi_zeleno-crni" src="slike/ZadnjiSedezi_zeleno-crni.jpg" alt="Snow" style="width:100%">
+                    </div>
+                  </div>                  
+            </div>
+
+            <button id="testIzbireSedezev" class="accordion">Section 3</button>
+            <div class="panel">
+                <p>Prostor za opcije.</p>
+            </div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+            </div>
         </div>
-        <script src="js/tween.umd.js"></script>
-        <script src="logic.js" type="module"></script>
-        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-        <script src="https://raw.githubusercontent.com/alvarotrigo/fullPage.js/master/src/fullpage.js"></script>       
-        
-        
-<script // vanilla JavaScript
-new fullpage('#fullpage', {
-    // options here
-});
-
-// jQuery
-$('#fullpage').fullpage({
-  // options here
-});
-        ></script>   
-
-        
+        <div class="second-row">
+            <script src="js/tween.umd.js"></script>
+            <script src="logic.js" type="module"></script>
+        </div>
      </body>
  </html>
 
