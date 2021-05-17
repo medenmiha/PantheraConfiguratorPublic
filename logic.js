@@ -17,6 +17,17 @@ var partsArray = []; //
 
 var DesniPrednjiSedez_modro_crni, DesniPrednjiSedez_oranzno_sivo_beli, DesniPrednjiSedez_zeleno_crni, LeviPrednjiSedez_modro_crni, LeviPrednjiSedez_oranzno_sivo_beli, LeviPrednjiSedez_zeleno_crni, ZadnjiSedezi_modro_crni, ZadnjiSedezi_oranzno_sivo_beli, ZadnjiSedezi_zeleno_crni, DesniPrednjiSedez_rdece_crni, LeviPrednjiSedez_rdece_crni, ZadnjiSedezi_rdece_crni;
 
+$(document).ready(function() {
+    $('#fullpage').fullpage({
+      navigation: true,
+      navigationPosition: 'right',
+      navigationTooltips: ['section1', 'section2','section3','section4',],
+      showActiveTooltip: true,
+      slidesNavigation: true,
+        slidesNavPosition: 'bottom',
+      controlArrows:false,
+    });
+});
 
 scene = new THREE.Scene();
 clock = new THREE.Clock();
