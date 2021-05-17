@@ -26,16 +26,14 @@
         <script src="https://raw.githubusercontent.com/alvarotrigo/fullPage.js/master/src/fullpage.js"></script>       
         
         
-<script        $(document).ready(function() {
-    $('#fullpage').fullpage({
-      navigation: true,
-      navigationPosition: 'right',
-      navigationTooltips: ['section1', 'section2','section3','section4',],
-      showActiveTooltip: true,
-      slidesNavigation: true,
-        slidesNavPosition: 'bottom',
-      controlArrows:false,
-    });
+<script // vanilla JavaScript
+new fullpage('#fullpage', {
+    // options here
+});
+
+// jQuery
+$('#fullpage').fullpage({
+  // options here
 });
         ></script>   
 
