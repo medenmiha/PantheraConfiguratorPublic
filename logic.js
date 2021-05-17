@@ -240,13 +240,13 @@ function interiorConfiguration(){
 
 //NAVIGATION BUTTONS
 
-document.getElementById("exteriorSection").onclick = function() {
-  exteriorConfiguration();
-};
+//document.getElementById("exteriorSection").onclick = function() {
+//  exteriorConfiguration();
+//};
 
-document.getElementById("seatsSection").onclick = function() {
-  seatsConfiguration();
-};
+// document.getElementById("seatsSection").onclick = function() {
+//  seatsConfiguration();
+//};
 
 introConfiguration()
 animate();
