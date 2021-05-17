@@ -14,52 +14,8 @@
  -->
     
     <body>
-        <div class="first-row">
-            <h1>Panthera configurator</h1>
-
-            <button id="exteriorSection" class="accordion">Exterior</button>
-            <div class="panel">
-              <div class="row">
-                <div class="column">
-                  <img id="zelenaPanthera" src="slike/zelena.jpg" alt="Snow" style="width:100%">
-                </div>
-                <div class="column">
-                  <img id="vijolicnaPanthera" src="slike/vijolicna.jpg" alt="Snow" style="width:100%">
-                </div>
-                <div class="column">
-                  <img id="modraPanthera" src="slike/modra.jpg" alt="Snow" style="width:100%">
-                </div>
-                <div class="column">
-                  <img id="oranznaPanthera" src="slike/oranzna.jpg" alt="Snow" style="width:100%">
-                </div>
-              </div> 
-            </div>
-
-            <button id= "seatsSection" class="accordion">Seats</button>
-            
-            <button id="testIzbireSedezev" class="accordion">Section 3</button>
-            <div class="panel">
-                <p>Prostor za opcije.</p>
-            </div>
-<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}
-</script>
-
-            </div>
-        </div>
+        <div class="first-row"></div>
+        
         <div class="second-row">
             <script src="js/tween.umd.js"></script>
             <script src="logic.js" type="module"></script>
