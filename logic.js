@@ -17,6 +17,7 @@ var partsArray = []; //
 
 var DesniPrednjiSedez_modro_crni, DesniPrednjiSedez_oranzno_sivo_beli, DesniPrednjiSedez_zeleno_crni, LeviPrednjiSedez_modro_crni, LeviPrednjiSedez_oranzno_sivo_beli, LeviPrednjiSedez_zeleno_crni, ZadnjiSedezi_modro_crni, ZadnjiSedezi_oranzno_sivo_beli, ZadnjiSedezi_zeleno_crni, DesniPrednjiSedez_rdece_crni, LeviPrednjiSedez_rdece_crni, ZadnjiSedezi_rdece_crni;
 
+
 scene = new THREE.Scene();
 clock = new THREE.Clock();
 
@@ -239,13 +240,49 @@ function interiorConfiguration(){
 
 //NAVIGATION BUTTONS
 
-//document.getElementById("exteriorSection").onclick = function() {
-//  exteriorConfiguration();
-//};
+document.getElementById("exteriorSection").onclick = function() {
+  exteriorConfiguration();
+};
 
-// document.getElementById("seatsSection").onclick = function() {
-//  seatsConfiguration();
-//};
+document.getElementById("seatsSection").onclick = function() {
+  seatsConfiguration();
+};
+
+document.getElementById("testIzbireSedezev").onclick = function() {
+
+};
+
+document.getElementById("slikaZadnjiSedezi_modro-crni").onclick = function() {
+  
+};
+
+document.getElementById("slikaZadnjiSedezi_oranzno-sivo-beli").onclick = function() {
+  
+};
+
+document.getElementById("slikaZadnjiSedezi_rdece-crni").onclick = function() {
+  
+};
+
+document.getElementById("slikaZadnjiSedezi_zeleno-crni").onclick = function() {
+  
+};
+
+document.getElementById("oranznaPanthera").onclick = function() {
+ 
+};
+
+document.getElementById("zelenaPanthera").onclick = function() {
+  
+};
+
+document.getElementById("modraPanthera").onclick = function() {
+  
+};
+
+document.getElementById("vijolicnaPanthera").onclick = function() {
+
+};
 
 introConfiguration()
 animate();
