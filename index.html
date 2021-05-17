@@ -15,10 +15,24 @@
             <div class="section" id="section3">section3</div>
             <div class="section" id="section4">section4</div>
         </div>
+        <script src="js/tween.umd.js"></script>
+        <script src="logic.js" type="module"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js"></script>
         
         
-            <script src="js/tween.umd.js"></script>
-            <script src="logic.js" type="module"></script>
+<script        $(document).ready(function() {
+    $('#fullpage').fullpage({
+      navigation: true,
+      navigationPosition: 'right',
+      navigationTooltips: ['section1', 'section2','section3','section4',],
+      showActiveTooltip: true,
+      slidesNavigation: true,
+        slidesNavPosition: 'bottom',
+      controlArrows:false,
+    });
+});
+
         
      </body>
  </html>
