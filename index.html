@@ -17,46 +17,21 @@
         <div class="first-row">
             <h1>Panthera configurator</h1>
 
-            <button id="exteriorSection" class="accordion">Exterior</button>
-            <div class="panel">
-              <div class="row">
-                <div class="column">
-                  <img id="zelenaPanthera" src="slike/zelena.jpg" alt="Snow" style="width:100%">
-                </div>
-                <div class="column">
-                  <img id="vijolicnaPanthera" src="slike/vijolicna.jpg" alt="Snow" style="width:100%">
-                </div>
-                <div class="column">
-                  <img id="modraPanthera" src="slike/modra.jpg" alt="Snow" style="width:100%">
-                </div>
-                <div class="column">
-                  <img id="oranznaPanthera" src="slike/oranzna.jpg" alt="Snow" style="width:100%">
-                </div>
-              </div> 
-            </div>
-
-            <button id= "seatsSection" class="accordion">Seats</button>
-            <div class="panel">
-                <div class="row">
-                    <div class="column">
-                      <img id="slikaZadnjiSedezi_modro-crni" src="slike/ZadnjiSedezi_modro-crni.jpg" alt="Snow" style="width:100%">
-                    </div>
-                    <div class="column">
-                      <img id="slikaZadnjiSedezi_oranzno-sivo-beli" src="slike/ZadnjiSedezi_oranzno-sivo-beli.jpg" alt="Snow" style="width:100%">
-                    </div>
-                    <div class="column">
-                      <img id="slikaZadnjiSedezi_rdece-crni" src="slike/ZadnjiSedezi_rdece-crni.jpg" alt="Snow" style="width:100%">
-                    </div>
-                    <div class="column">
-                      <img id="slikaZadnjiSedezi_zeleno-crni" src="slike/ZadnjiSedezi_zeleno-crni.jpg" alt="Snow" style="width:100%">
-                    </div>
-                  </div>                  
-            </div>
-
-            <button id="testIzbireSedezev" class="accordion">Section 3</button>
-            <div class="panel">
-                <p>Prostor za opcije.</p>
-            </div>
+            <nav class="links">
+              <a href="#element-1">1</a>
+              <a href="#element-2">2</a>
+              <a href="#element-3">3</a>
+              <a href="#element-4">4</a>
+              <a href="#element-5">5</a>
+          </nav>
+          
+          <div class="hold">
+              <div id="exteriorSection" class="element element-1"></div>
+              <div id="seatsSection" class="element element-2"></div>
+              <div id="element-3" class="element element-3"></div>
+              <div id="element-4" class="element element-4"></div>
+              <div id="element-5" class="element element-5"></div>
+          </div>
 <script>
 var acc = document.getElementsByClassName("accordion");
 var i;
