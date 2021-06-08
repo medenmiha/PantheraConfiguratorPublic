@@ -261,9 +261,6 @@ document.getElementById("seatsSection").onclick = function() {
   seatsConfiguration();
 };
 
-document.getElementById("testIzbireSedezev").onclick = function() {
-
-};
 
 document.getElementById("slikaZadnjiSedezi_modro-crni").onclick = function() {
   
