@@ -43,7 +43,13 @@ body, html {width: 100%; height: 100%; margin: 0; padding: 0}
   
   .links a:hover,
   .links a:focus { background-color: #444; }
-  
+
+  .panth{
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
   .hold {
     overflow-x: hidden;
     overflow-y: auto;
