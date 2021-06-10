@@ -6,7 +6,7 @@ body, html {width: 100%; height: 100%; margin: 0; padding: 0}
     top: 0;
     left: 0;
     z-index: -1;
-    opacity: 0.5;
+    opacity: 0.9;
 }
 
 .warning {
@@ -71,7 +71,7 @@ body, html {width: 100%; height: 100%; margin: 0; padding: 0}
     text-align: center;
     color: #FFF;
     position: relative;
-    z-index: -3;
+    z-index: 20;
     opacity: 0.3;
   }
   
