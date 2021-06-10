@@ -62,7 +62,7 @@ body, html {width: 100%; height: 100%; margin: 0; padding: 0}
     scroll-snap-points-y: repeat(100vh);
     height: 100%;
     width: 100%;
-      z-index: 0;
+    z-index: 0;
   }
   
   .element {
@@ -71,7 +71,7 @@ body, html {width: 100%; height: 100%; margin: 0; padding: 0}
     text-align: center;
     color: #FFF;
     position: relative;
-    z-index: 20;
+    z-index: 0;
     opacity: 0.3;
   }
   
