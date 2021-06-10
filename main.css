@@ -1,5 +1,14 @@
 body, html {width: 100%; height: 100%; margin: 0; padding: 0}
 
+#canvas-container {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.9;
+}
+
 .warning {
     position: fixed;
     z-index: 10;
@@ -16,7 +25,7 @@ body, html {width: 100%; height: 100%; margin: 0; padding: 0}
     width: 100%;
     height: 40px;
     background-color: #666;
-    z-index: 1;
+    z-index: 2;
   }
   
   .links a {
@@ -47,31 +56,22 @@ body, html {width: 100%; height: 100%; margin: 0; padding: 0}
   .hold {
     overflow-x: hidden;
     overflow-y: auto;
-    position: relative;
+    position: absolute;
     scroll-behavior: smooth;
     scroll-snap-type: mandatory;
     scroll-snap-points-y: repeat(100vh);
-    height: 100vh;
+    height: 100%;
+    width: 100%;
   }
   
   .element {
-    height: 100vh;
+    height: 50%;
+    width: 100%;
     text-align: center;
     color: #FFF;
     position: relative;
-  }
-  
-  .element::after {
-    line-height: 100vh;
-    position: absolute;
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 10rem;
-    text-shadow: 1px 1px 10px rgba(0,0,0,.5);
-    width: 100%;
-    left: 0;
-    top: 0;
-    text-align: center;
+    z-index: 1;
+    opacity: 0.3;
   }
   
   .element-1 { background-color: #D64541; }
@@ -79,9 +79,3 @@ body, html {width: 100%; height: 100%; margin: 0; padding: 0}
   .element-3 { background-color: #019875; }
   .element-4 { background-color: #6C7A89; }
   .element-5 { background-color: #F2784B; }
-  
-  .element-1::after { content: 'Hi!'; }
-  .element-2::after { content: 'My'; }
-  .element-3::after { content: 'name'; }
-  .element-4::after { content: 'is'; }
-  .element-5::after { content: 'Fabeni!'; }
