@@ -13,7 +13,6 @@ body, html {width: 100%; height: 100%; margin: 0; padding: 0}
   height: 200px;
   position: relative;
   border: 3px solid green;
-    pointer-events: auto; 
 }
 
 .center {
@@ -23,6 +22,7 @@ body, html {width: 100%; height: 100%; margin: 0; padding: 0}
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+   pointer-events: auto; 
 }
 
 .warning {
