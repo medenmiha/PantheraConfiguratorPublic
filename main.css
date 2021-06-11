@@ -146,7 +146,8 @@ body, html {width: 100%; height: 100%; margin: 0; padding: 0}
   float: left;
   width: 33.33%;
   padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+  height: 200px;
+  bottom: 10px;
 }
 
 /* Clear floats after the columns */
@@ -159,5 +160,7 @@ body, html {width: 100%; height: 100%; margin: 0; padding: 0}
 @media (max-width: 600px) {
   .column {
     width: 100%;
+    height: 200px;
+    bottom: 10px;
   }
 }
