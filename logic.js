@@ -290,6 +290,9 @@ document.getElementById("instrumentSection").onclick = function() {
 };
 
 
+introConfiguration()
+animate();
+
 
   //var target =  { x : 0, y: 0, z: 0 };
   //const tween = new TWEEN.Tween(position).to(target, 2000); //
@@ -328,5 +331,4 @@ document.getElementById("instrumentSection").onclick = function() {
   
   console.log( slideIndex);
 
-  introConfiguration()
-animate();
+  
