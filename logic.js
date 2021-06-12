@@ -246,10 +246,34 @@ function seatsConfiguration(){
 }
 
 
-//Trenutno za rezervo
-function interiorConfiguration(){
-  interiorCamera.position.set( - 1, 0.6, -4 );
+function instrumentConfiguration(){
+  
+  pogoj = true;
+
+  var target1 =  { x : 1.27, y: 2.3, z: 0.62 };
+  cameraPosition.x = selectedCamera.position.x
+  cameraPosition.y = selectedCamera.position.y
+  cameraPosition.z = selectedCamera.position.z
+  const tween = new TWEEN.Tween(cameraPosition ).to(target1, 2000); //
+  selectedCamera.aspect = window.innerWidth / window.innerHeight;
+  selectedCamera.updateProjectionMatrix();
+  tween.start();
+  setTimeout(() => {
+    pogoj = false;
+  }, 2000)
+
+  selectedCamera = interiorCamera;
+  controls = new OrbitControls( selectedCamera, renderer.domElement );
+  controls.minDistance = 0.5;
+  controls.maxDistance = 5
+  controls.target.set( 0, 0, 1);
+	
+  cameraLook.x=0;
+  cameraLook.y=0;
+  cameraLook.z=1;
+  
 }
+
 
 //NAVIGATION BUTTONS
 
@@ -261,6 +285,9 @@ document.getElementById("seatsSection").onclick = function() {
   seatsConfiguration();
 };
 
+document.getElementById("instrumentSection").onclick = function() {
+  instrumentConfiguration();
+};
 
 
 introConfiguration()
