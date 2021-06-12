@@ -16,7 +16,7 @@ body, html {width: 100%; height: 100%; margin: 0; padding: 0}
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-   pointer-events: auto; 
+  pointer-events: auto; 
 }
 
 .warning {
@@ -83,7 +83,7 @@ body, html {width: 100%; height: 100%; margin: 0; padding: 0}
     color: #FFF;
     position: relative;
     z-index: 0;
-    opacity: 0.2;
+    opacity: 0.5;
      
   }
   
@@ -180,6 +180,7 @@ img {vertical-align: middle;}
   position: relative;
   margin: auto;
   z-index: 10;
+  pointer-events: auto; 
 }
 
 /* Next & previous buttons */
