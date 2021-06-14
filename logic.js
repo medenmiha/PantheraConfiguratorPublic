@@ -81,7 +81,7 @@ new RGBELoader()
 var roughnessMipmapper = new RoughnessMipmapper( renderer );
 
 var loader = new GLTFLoader();
-loader.load( 'datoteke/PantheraFinalKomad-Baked - brezProblema.gltf', 
+loader.load( 'datoteke/PantheraFinal - 2.gltf', 
 function ( gltf ) {
 
       gltf.scene.traverse( function ( child ) {
