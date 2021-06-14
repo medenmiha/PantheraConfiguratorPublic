@@ -302,12 +302,14 @@ animate();
 
 
 
+
+  document.getElementById("next").onclick = function() {
+    plusSlides(1);
+  };
+
+
   var slideIndex = 1;
   showSlides(slideIndex);
-
-  function nextSlide(){
-    plusSlides(1);
-  }
   
   function plusSlides(n) {
     showSlides(slideIndex += n);
