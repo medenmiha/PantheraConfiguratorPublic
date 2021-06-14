@@ -314,6 +314,7 @@ animate();
   
   function plusSlides(n) {
     showSlides(slideIndex += n);
+    console.log( slideIndex);
   }
   
   function currentSlide(n) {
@@ -336,6 +337,5 @@ animate();
     dots[slideIndex-1].className += " active";
   }
   
-  console.log( slideIndex);
 
   
