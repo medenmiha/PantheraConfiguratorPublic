@@ -15,7 +15,6 @@ var cameraLook = new THREE.Vector3(0, 0, 0);  //
 
 var partsArray = []; //
 
-var DesniPrednjiSedez_modro_crni, DesniPrednjiSedez_oranzno_sivo_beli, DesniPrednjiSedez_zeleno_crni, LeviPrednjiSedez_modro_crni, LeviPrednjiSedez_oranzno_sivo_beli, LeviPrednjiSedez_zeleno_crni, ZadnjiSedezi_modro_crni, ZadnjiSedezi_oranzno_sivo_beli, ZadnjiSedezi_zeleno_crni, DesniPrednjiSedez_rdece_crni, LeviPrednjiSedez_rdece_crni, ZadnjiSedezi_rdece_crni;
 
 
 scene = new THREE.Scene();
@@ -94,6 +93,15 @@ function ( gltf ) {
         } );
         
         scene.add( gltf.scene );
+
+
+        var Sedezi_modro_crni = scene.getObjectByName("Sedezi_modro-crni");
+        var Sedezi_oranzno_sivo_beli = scene.getObjectByName("Sedezi_oranzno-sivo-beli");
+        var Sedezi_rdece_crni = scene.getObjectByName("Sedezi_rdece-crni");
+        var Sedezi_zeleno_crni = scene.getObjectByName("Sedezi_zeleno-crni");
+
+        Sedezi_modro_crni = false;
+
 
 
         //console.log(partsArray.length) // 
