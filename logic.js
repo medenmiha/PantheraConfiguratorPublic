@@ -106,6 +106,13 @@ function ( gltf ) {
         Sedezi_rdece_crni.visible = true;
         Sedezi_zeleno_crni.visible = false;
 
+        function rdeci(){
+          Sedezi_modro_crni.visible = false;
+      Sedezi_oranzno_sivo_beli.visible = false;
+      Sedezi_rdece_crni.visible = false;
+      Sedezi_zeleno_crni.visible = false;
+        }
+
 
 
         //console.log(partsArray.length) // 
@@ -349,10 +356,7 @@ animate();
     slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
     if(slideIndex=2){
-      Sedezi_modro_crni.visible = false;
-      Sedezi_oranzno_sivo_beli.visible = false;
-      Sedezi_rdece_crni.visible = false;
-      Sedezi_zeleno_crni.visible = false;
+      rdeci()
     }
   }
   
