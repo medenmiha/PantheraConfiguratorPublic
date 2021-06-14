@@ -106,12 +106,6 @@ function ( gltf ) {
         Sedezi_rdece_crni.visible = true;
         Sedezi_zeleno_crni.visible = false;
 
-        function rdeci(){
-          Sedezi_modro_crni.visible = false;
-      Sedezi_oranzno_sivo_beli.visible = false;
-      Sedezi_rdece_crni.visible = false;
-      Sedezi_zeleno_crni.visible = false;
-        }
 
 
 
@@ -314,7 +308,12 @@ document.getElementById("instrumentSection").onclick = function() {
 
 
 // VIZUALIZACIJA SEDEZEV
-
+function rdeci(){
+  Sedezi_modro_crni.visible = false;
+Sedezi_oranzno_sivo_beli.visible = false;
+Sedezi_rdece_crni.visible = false;
+Sedezi_zeleno_crni.visible = false;
+}
 
 
 
