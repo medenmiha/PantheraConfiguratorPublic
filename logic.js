@@ -101,6 +101,9 @@ function ( gltf ) {
         var Sedezi_zeleno_crni = scene.getObjectByName("Sedezi_zeleno-crni");
 
         Sedezi_modro_crni = false;
+        Sedezi_oranzno_sivo_beli = false;
+        Sedezi_rdece_crni = false;
+        Sedezi_zeleno_crni = false;
 
 
 
