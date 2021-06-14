@@ -353,7 +353,7 @@ animate();
     slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
 
-    if(slideIndex>1){
+    if(slideIndex==3){
       Sedezi_modro_crni.visible = false;
           Sedezi_oranzno_sivo_beli.visible = false;
           Sedezi_rdece_crni.visible = false;
