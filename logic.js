@@ -309,17 +309,6 @@ animate();
 
 // VIZUALIZACIJA SEDEZEV
 
-function rdeciSedezi(){
-  Sedezi_modro_crni.visible = false;
-        Sedezi_oranzno_sivo_beli.visible = false;
-        Sedezi_rdece_crni.visible = true;
-        Sedezi_zeleno_crni.visible = false;
-}
-
-if (slideIndex=2){
-  rdeciSedezi()
-}
-
 
 
 
@@ -327,6 +316,10 @@ if (slideIndex=2){
 
   document.getElementById("nextSlide").onclick = function() {
     plusSlides(1);
+    Sedezi_modro_crni.visible = false;
+        Sedezi_oranzno_sivo_beli.visible = false;
+        Sedezi_rdece_crni.visible = false;
+        Sedezi_zeleno_crni.visible = false;
   };
 
   document.getElementById("prevSlide").onclick = function() {
