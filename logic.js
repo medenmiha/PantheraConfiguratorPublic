@@ -304,6 +304,10 @@ animate();
 
   var slideIndex = 1;
   showSlides(slideIndex);
+
+  function nextSlide(){
+    plusSlides(1);
+  }
   
   function plusSlides(n) {
     showSlides(slideIndex += n);
