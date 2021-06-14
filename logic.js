@@ -310,8 +310,7 @@ document.getElementById("instrumentSection").onclick = function() {
 };
 
 
-introConfiguration()
-animate();
+
 
 
 // VIZUALIZACIJA SEDEZEV
@@ -356,9 +355,11 @@ animate();
     slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
     if(slideIndex=2){
-      rdeci()
+      rdeci();
     }
   }
   
+  introConfiguration()
+animate();
 
   
