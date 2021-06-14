@@ -8,7 +8,7 @@ import { RoughnessMipmapper } from 'https://threejs.org/examples/jsm/utils/Rough
 var container, controls, controls1;
 var camera, scene, renderer, mixer, clock, camera1;
 var exteriorCamera, interiorCamera, selectedCamera, selectedControls;
-var action1, action2, action3, clip1, clip2, clip3;
+var action1, action2, action3, action4, clip1, clip2, clip3, clip4;
 var cameraPosition = { x : 0, y: 0, z: 0 };
 var pogoj = false;
 var cameraLook = new THREE.Vector3(0, 0, 0);  //
