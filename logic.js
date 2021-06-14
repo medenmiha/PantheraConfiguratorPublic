@@ -43,8 +43,7 @@ controls.minDistance = 2;
 controls.maxDistance = 10
 controls.target.set( 0, 0, 0 );
 
-//exteriorConfiguration(); //Default start from outside configuration
-
+// NAVIGACIJA SPLETNE STRANI
 var isScrollSnapSupported = 'scrollSnapType' in document.documentElement.style ||
         'webkitScrollSnapType' in document.documentElement.style;
 
@@ -58,6 +57,8 @@ if (!isScrollSnapSupported) {
   local.insertBefore(elem, local.firstChild);
 }
 
+
+//LOGIKA 3D PREMDETA
 new RGBELoader()
   .setDataType( THREE.UnsignedByteType )
   .setPath( 'https://threejs.org/examples/textures/equirectangular/' )
@@ -294,14 +295,11 @@ introConfiguration()
 animate();
 
 
-  //var target =  { x : 0, y: 0, z: 0 };
-  //const tween = new TWEEN.Tween(position).to(target, 2000); //
-  //tween.start();
 
 
 
 
-
+// SLIDER SEATS  // slide index se uredi
 
   document.getElementById("nextSlide").onclick = function() {
     plusSlides(1);
