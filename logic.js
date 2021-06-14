@@ -101,7 +101,10 @@ function ( gltf ) {
         Sedezi_rdece_crni = scene.getObjectByName("Sedezi_rdece-crni");
         Sedezi_zeleno_crni = scene.getObjectByName("Sedezi_zeleno-crni");
 
-        
+        Sedezi_modro_crni.visible = true;
+        Sedezi_oranzno_sivo_beli.visible = false;
+        Sedezi_rdece_crni.visible = false;
+        Sedezi_zeleno_crni.visible = false;
 
 
 
@@ -351,7 +354,7 @@ animate();
     dots[slideIndex-1].className += " active";
 
     if(slideIndex==1){
-      Sedezi_modro_crni.visible = true;
+      
       Sedezi_oranzno_sivo_beli.visible = false;
       Sedezi_rdece_crni.visible = false;
       Sedezi_zeleno_crni.visible = false;
