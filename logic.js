@@ -96,8 +96,15 @@ function ( gltf ) {
         scene.add( gltf.scene );
 
 
+        Sedezi_modro_crni = scene.getObjectByName("Sedezi_modro-crni");
+        Sedezi_oranzno_sivo_beli = scene.getObjectByName("Sedezi_oranzno-sivo-beli");
+        Sedezi_rdece_crni = scene.getObjectByName("Sedezi_rdece-crni");
+        Sedezi_zeleno_crni = scene.getObjectByName("Sedezi_zeleno-crni");
 
-
+        Sedezi_modro_crni.visible = false;
+        Sedezi_oranzno_sivo_beli.visible = false;
+        Sedezi_rdece_crni.visible = true;
+        Sedezi_zeleno_crni.visible = false;
 
 
 
@@ -124,16 +131,6 @@ function ( gltf ) {
       
       );
  
-      Sedezi_modro_crni = scene.getObjectByName("Sedezi_modro-crni");
-      Sedezi_oranzno_sivo_beli = scene.getObjectByName("Sedezi_oranzno-sivo-beli");
-      Sedezi_rdece_crni = scene.getObjectByName("Sedezi_rdece-crni");
-      Sedezi_zeleno_crni = scene.getObjectByName("Sedezi_zeleno-crni");
-
-      Sedezi_modro_crni.visible = false;
-      Sedezi_oranzno_sivo_beli.visible = false;
-      Sedezi_rdece_crni.visible = true;
-      Sedezi_zeleno_crni.visible = false;
-
 var pmremGenerator = new THREE.PMREMGenerator( renderer );
 pmremGenerator.compileEquirectangularShader();
   
@@ -306,16 +303,12 @@ document.getElementById("instrumentSection").onclick = function() {
 };
 
 
-
+introConfiguration()
+animate();
 
 
 // VIZUALIZACIJA SEDEZEV
-function rdeci(){
-  Sedezi_modro_crni.visible = false;
-Sedezi_oranzno_sivo_beli.visible = false;
-Sedezi_rdece_crni.visible = false;
-Sedezi_zeleno_crni.visible = false;
-}
+
 
 
 
@@ -355,12 +348,7 @@ Sedezi_zeleno_crni.visible = false;
     }
     slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
-    if(slideIndex=2){
-      rdeci();
-    }
   }
   
-  introConfiguration()
-animate();
 
   
