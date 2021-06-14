@@ -323,7 +323,7 @@ animate();
   };
 
   document.getElementById("currentSlideT").onclick = function() {
-    plusSlides(-1);
+    currentSlide(n)
   };
 
   var slideIndex = 1;
