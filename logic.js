@@ -120,6 +120,10 @@ function ( gltf ) {
 		        
         clip3 = gltf.animations[ 2 ];
 		    action3 = mixer.clipAction(clip3);
+
+        //Podvozje
+        clip4 = gltf.animations[ 3 ];
+		    action4 = mixer.clipAction(clip3);
 		  },
 
       function ( xhr ) {
@@ -284,6 +288,10 @@ function instrumentConfiguration(){
   cameraLook.x=0;
   cameraLook.y=0;
   cameraLook.z=1;
+
+  action4.clampWhenFinished = true;
+  action4.loop = THREE.LoopOnce;
+  action4.play();
   
 }
 
