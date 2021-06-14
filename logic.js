@@ -122,7 +122,7 @@ function ( gltf ) {
 		    action3 = mixer.clipAction(clip3);
 
         //Podvozje
-        clip4 = gltf.animations[ 3 ];
+        clip4 = gltf.animations[ 4 ];
 		    action4 = mixer.clipAction(clip3);
 		  },
 
