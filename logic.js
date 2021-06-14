@@ -15,6 +15,7 @@ var cameraLook = new THREE.Vector3(0, 0, 0);  //
 
 var partsArray = []; //
 
+var Sedezi_modro_crni, Sedezi_oranzno_sivo_beli, Sedezi_rdece_crni, Sedezi_zeleno_crni;
 
 
 scene = new THREE.Scene();
@@ -95,10 +96,10 @@ function ( gltf ) {
         scene.add( gltf.scene );
 
 
-        var Sedezi_modro_crni = scene.getObjectByName("Sedezi_modro-crni");
-        var Sedezi_oranzno_sivo_beli = scene.getObjectByName("Sedezi_oranzno-sivo-beli");
-        var Sedezi_rdece_crni = scene.getObjectByName("Sedezi_rdece-crni");
-        var Sedezi_zeleno_crni = scene.getObjectByName("Sedezi_zeleno-crni");
+        Sedezi_modro_crni = scene.getObjectByName("Sedezi_modro-crni");
+        Sedezi_oranzno_sivo_beli = scene.getObjectByName("Sedezi_oranzno-sivo-beli");
+        Sedezi_rdece_crni = scene.getObjectByName("Sedezi_rdece-crni");
+        Sedezi_zeleno_crni = scene.getObjectByName("Sedezi_zeleno-crni");
 
         Sedezi_modro_crni.visible = false;
         Sedezi_oranzno_sivo_beli.visible = false;
