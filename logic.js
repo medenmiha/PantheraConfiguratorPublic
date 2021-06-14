@@ -303,10 +303,13 @@ animate();
 
 
 
-  document.getElementById("next").onclick = function() {
+  document.getElementById("nextSlide").onclick = function() {
     plusSlides(1);
   };
 
+  document.getElementById("prevSlide").onclick = function() {
+    plusSlides(-1);
+  };
 
   var slideIndex = 1;
   showSlides(slideIndex);
