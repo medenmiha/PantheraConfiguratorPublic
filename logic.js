@@ -322,6 +322,10 @@ animate();
     plusSlides(-1);
   };
 
+  document.getElementById("currentSlideT").onclick = function() {
+    plusSlides(-1);
+  };
+
   var slideIndex = 1;
   showSlides(slideIndex);
   
