@@ -225,6 +225,7 @@ function seatsConfiguration(){
 
   action1.clampWhenFinished = true;
   action1.loop = true;
+  action1.loop = THREE.LoopOnce;
   action1.timeScale = -1;
   action1.play();
 
