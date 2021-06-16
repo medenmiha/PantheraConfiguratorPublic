@@ -224,8 +224,7 @@ function exteriorConfiguration(){
 function seatsConfiguration(){
 
   action1.clampWhenFinished = true;
-  action1.loop = false;
-  action1.timeScale = -1;
+  action1.loop = THREE.LoopOnce;
   action1.play();
 
   action2.clampWhenFinished = true;
