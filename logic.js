@@ -235,6 +235,12 @@ function seatsConfiguration(){
   action3.loop = THREE.LoopOnce;
   action3.play();
 
+  action4.reset();
+  action4.clampWhenFinished = true;
+  action4.timeScale = 1;
+  action4.setLoop(THREE.LoopOnce, 1);
+  action4.play();
+
   pogoj = true;
  
 
@@ -288,12 +294,6 @@ function instrumentConfiguration(){
   cameraLook.x=0;
   cameraLook.y=0;
   cameraLook.z=1;
-
-  action4.reset();
-  action4.clampWhenFinished = true;
-  action4.timeScale = 1;
-  action4.setLoop(THREE.LoopOnce, 1);
-  action4.play();
   
 }
 
