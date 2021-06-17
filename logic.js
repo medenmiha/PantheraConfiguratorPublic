@@ -8,7 +8,8 @@ import { RoughnessMipmapper } from 'https://threejs.org/examples/jsm/utils/Rough
 var container, controls, controls1;
 var camera, scene, renderer, mixer, clock, camera1;
 var exteriorCamera, interiorCamera, selectedCamera, selectedControls;
-var action1, action2, action3, action4, clip1, clip2, clip3, clip4;
+var action1, action2, action3, action4, action5, action6, action7, action8;
+var clip1, clip2, clip3, clip4, clip5, clip6, clip7, clip8;
 var cameraPosition = { x : 0, y: 0, z: 0 };
 var pogoj = false;
 var podvozjeZunaj = true;
@@ -201,6 +202,18 @@ function podvozjeNot(){
     action6.timeScale = 1;
     action6.setLoop(THREE.LoopOnce, 1);
     action6.play();
+
+    action7.reset();
+    action7.clampWhenFinished = true;
+    action7.timeScale = 1;
+    action7.setLoop(THREE.LoopOnce, 1);
+    action7.play();
+
+    action8.reset();
+    action8.clampWhenFinished = true;
+    action8.timeScale = 1;
+    action8.setLoop(THREE.LoopOnce, 1);
+    action8.play();
   }
 }
 
@@ -214,6 +227,12 @@ function podvozjeVen(){
 
     action6.timeScale = -1;
     action6.paused = false;
+
+    action7.timeScale = -1;
+    action7.paused = false;
+
+    action8.timeScale = -1;
+    action8.paused = false;
   }
 }
 
