@@ -125,6 +125,18 @@ function ( gltf ) {
         //Podvozje
         clip4 = gltf.animations[ 3 ];
 		    action4 = mixer.clipAction(clip4);
+
+        clip5 = gltf.animations[ 4 ];
+		    action5 = mixer.clipAction(clip5);
+
+        clip6 = gltf.animations[ 5 ];
+		    action6 = mixer.clipAction(clip6);
+        
+        clip7 = gltf.animations[ 6 ];
+		    action7 = mixer.clipAction(clip7);
+
+        clip8 = gltf.animations[ 7 ];
+		    action8 = mixer.clipAction(clip8);
 		  },
 
       function ( xhr ) {
@@ -177,6 +189,18 @@ function podvozjeNot(){
     action4.timeScale = 1;
     action4.setLoop(THREE.LoopOnce, 1);
     action4.play();
+
+    action5.reset();
+    action5.clampWhenFinished = true;
+    action5.timeScale = 1;
+    action5.setLoop(THREE.LoopOnce, 1);
+    action5.play();
+
+    action6.reset();
+    action6.clampWhenFinished = true;
+    action6.timeScale = 1;
+    action6.setLoop(THREE.LoopOnce, 1);
+    action6.play();
   }
 }
 
@@ -184,6 +208,12 @@ function podvozjeVen(){
   if(podvozjeZunaj==false){
     action4.timeScale = -1;
     action4.paused = false;
+
+    action5.timeScale = -1;
+    action5.paused = false;
+
+    action6.timeScale = -1;
+    action6.paused = false;
   }
 }
 
@@ -284,9 +314,6 @@ function instrumentConfiguration(){
   cameraLook.x=0;
   cameraLook.y=0;
   cameraLook.z=1;
-
-  action4.timeScale = -1;
-  action4.paused = false;
   
 }
 
