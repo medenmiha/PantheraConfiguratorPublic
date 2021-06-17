@@ -62,7 +62,24 @@ if (!isScrollSnapSupported) {
 
 
 //LOGIKA 3D PREMDETA
+new RGBELoader()
+  .setDataType( THREE.UnsignedByteType )
+  .setPath( 'https://threejs.org/examples/textures/equirectangular/' )
+  .load( 'venice_sunset_1k.hdr', function ( texture ) {
 
+    var envMap = pmremGenerator.fromEquirectangular( texture ).texture;
+
+    scene.background = envMap;
+    scene.environment = envMap;
+
+    texture.dispose();
+    pmremGenerator.dispose();
+
+    // model
+
+    // use of RoughnessMipmapper is optional
+
+    } );
 
 var roughnessMipmapper = new RoughnessMipmapper( renderer );
 
@@ -80,30 +97,6 @@ function ( gltf ) {
         } );
         
         scene.add( gltf.scene );
-
-        const amblight = new THREE.AmbientLight( 0x404040 ); // soft white light
-        scene.add( amblight );
-
-        const light2 = new THREE.PointLight(0xffffff, .5)
-light2.position.set(0, 1, 0)
-scene.add(light2)
-
-const light = new THREE.PointLight(0xffffff, .1)
-light.position.set(0, 2, 0)
-scene.add(light)
-light.castShadow = true
-light.shadow.mapSize.width = 4096
-light.shadow.mapSize.height = 4096
-light.shadow.camera.near = 0.1
-light.shadow.camera.far = 30
-
-renderer.shadowMap.enabled = true;
-renderer.shadowMap.type = THREE.PCFSoftShadowMap
-
-scene.background = new THREE.Color( 0xe0e0e0 )
-scene.fog = new THREE.Fog( 0xe0e0e0, 1, 15 )
-
-const geoPlane = new THREE.PlaneBufferGeometry(100, 100)
 
 
         Sedezi_modro_crni = scene.getObjectByName("Sedezi_modro-crni");
