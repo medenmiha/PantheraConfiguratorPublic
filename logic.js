@@ -64,8 +64,8 @@ if (!isScrollSnapSupported) {
 //LOGIKA 3D PREMDETA
 new RGBELoader()
   .setDataType( THREE.UnsignedByteType )
-  .setPath( 'https://threejs.org/examples/textures/equirectangular/' )
-  .load( 'venice_sunset_1k.hdr', function ( texture ) {
+  .setPath( 'datoteke/' )
+  .load( 'small_hangar_01_2k.hdr', function ( texture ) {
 
     var envMap = pmremGenerator.fromEquirectangular( texture ).texture;
 
