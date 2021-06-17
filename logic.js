@@ -11,6 +11,7 @@ var exteriorCamera, interiorCamera, selectedCamera, selectedControls;
 var action1, action2, action3, action4, clip1, clip2, clip3, clip4;
 var cameraPosition = { x : 0, y: 0, z: 0 };
 var pogoj = false;
+var podvozjeZunaj = true;
 var cameraLook = new THREE.Vector3(0, 0, 0);  //
 
 var partsArray = []; //
@@ -169,14 +170,22 @@ function animate() {
   renderer.render( scene, selectedCamera );
 }
 
-function podvozjeVen(){
-  action4.reset();
-  action4.clampWhenFinished = true;
-  action4.timeScale = 1;
-  action4.setLoop(THREE.LoopOnce, 1);
-  action4.play();
+function podvozjeNot(){
+  if(podvozjeZunaj==true){
+    action4.reset();
+    action4.clampWhenFinished = true;
+    action4.timeScale = 1;
+    action4.setLoop(THREE.LoopOnce, 1);
+    action4.play();
+  }
 }
 
+function podvozjeVen(){
+  if(podvozjeZunaj==false){
+    action4.timeScale = -1;
+    action4.paused = false;
+  }
+}
 
 function introConfiguration(){
 
@@ -201,6 +210,10 @@ function introConfiguration(){
   setTimeout(() => {
     pogoj = false;
   }, 2000)
+
+  podvozjeVen();
+  podvozjeZunaj = true;
+
    
 }
 
@@ -301,7 +314,8 @@ function exteriorConfiguration(){
     pogoj = false;
   }, 2000)
 
-  podvozjeVen();
+  podvozjeNot();
+  podvozjeZunaj=false;
    
 }
 
