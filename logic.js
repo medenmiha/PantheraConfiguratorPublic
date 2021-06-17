@@ -13,6 +13,7 @@ var clip1, clip2, clip3, clip4, clip5, clip6, clip7, clip8, clip9, clip10, clip1
 var cameraPosition = { x : 0, y: 0, z: 0 };
 var pogoj = false;
 var podvozjeZunaj = true;
+var doorsOpened = false;
 var cameraLook = new THREE.Vector3(0, 0, 0);  //
 
 var partsArray = []; //
@@ -205,6 +206,28 @@ function animate() {
   renderer.render( scene, selectedCamera );
 }
 
+function openDoors(){
+  if(doorsOpened==false){
+    action1.reset();
+    action1.clampWhenFinished = true;
+    action1.timeScale = 1;
+    action1.setLoop(THREE.LoopOnce, 1);
+    action1.play();
+
+    action2.reset();
+    action2.clampWhenFinished = true;
+    action2.timeScale = 1;
+    action2.setLoop(THREE.LoopOnce, 1);
+    action2.play();
+
+    action3.reset();
+    action3.clampWhenFinished = true;
+    action3.timeScale = 1;
+    action3.setLoop(THREE.LoopOnce, 1);
+    action3.play();
+  } 
+}
+
 function podvozjeNot(){
   if(podvozjeZunaj==true){
     action4.reset();
@@ -353,18 +376,6 @@ function introConfiguration(){
 
 function seatsConfiguration(){
 
-  action1.clampWhenFinished = true;
-  action1.loop = THREE.LoopOnce;
-  action1.play();
-
-  action2.clampWhenFinished = true;
-  action2.loop = THREE.LoopOnce;
-  action2.play();
-
-  action3.clampWhenFinished = true;
-  action3.loop = THREE.LoopOnce;
-  action3.play();
-
   pogoj = true;
  
 
@@ -389,6 +400,9 @@ function seatsConfiguration(){
   cameraLook.x=0;
   cameraLook.y=0;
   cameraLook.z=2.5;
+
+  openDoors();
+  doorsOpened = true;
   
 }
 
