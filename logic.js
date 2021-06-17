@@ -84,6 +84,22 @@ function ( gltf ) {
         const light = new THREE.AmbientLight( 0x404040 ); // soft white light
         scene.add( light );
 
+        const light2 = new THREE.PointLight(0xffffff, .5)
+light2.position.set(0, 1, 0)
+scene.add(light2)
+
+const light = new THREE.PointLight(0xffffff, .1)
+light.position.set(0, 2, 0)
+scene.add(light)
+light.castShadow = true
+light.shadow.mapSize.width = 4096
+light.shadow.mapSize.height = 4096
+light.shadow.camera.near = 0.1
+light.shadow.camera.far = 30
+
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap
+
 
         Sedezi_modro_crni = scene.getObjectByName("Sedezi_modro-crni");
         Sedezi_oranzno_sivo_beli = scene.getObjectByName("Sedezi_oranzno-sivo-beli");
