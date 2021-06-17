@@ -228,6 +228,19 @@ function openDoors(){
   } 
 }
 
+function closeDoors(){
+  if(doorsOpened==true){
+    action1.timeScale = -1;
+    action1.paused = false;
+
+    action2.timeScale = -1;
+    action2.paused = false;
+
+    action3.timeScale = -1;
+    action3.paused = false;
+  }
+}
+
 function podvozjeNot(){
   if(podvozjeZunaj==true){
     action4.reset();
@@ -371,6 +384,9 @@ function introConfiguration(){
   podvozjeVen();
   podvozjeZunaj = true;
 
+  closeDoors();
+  doorsOpened = false;
+
    
 }
 
@@ -461,6 +477,9 @@ function exteriorConfiguration(){
 
   podvozjeNot();
   podvozjeZunaj=false;
+
+  closeDoors();
+  doorsOpened = false;
    
 }
 
