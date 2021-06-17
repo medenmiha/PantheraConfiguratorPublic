@@ -296,8 +296,7 @@ function instrumentConfiguration(){
   cameraLook.z=1;
 
 
-  action4.timeScale = -1;
-  action4.paused = false;
+
 
   
   
