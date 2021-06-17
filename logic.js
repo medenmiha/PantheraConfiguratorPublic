@@ -100,8 +100,8 @@ light.shadow.camera.far = 30
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap
 
-//scene.background = new THREE.Color( 0xe0e0e0 )
-//scene.fog = new THREE.Fog( 0xe0e0e0, 1, 15 )
+scene.background = new THREE.Color( 0xe0e0e0 )
+scene.fog = new THREE.Fog( 0xe0e0e0, 1, 15 )
 
 const geoPlane = new THREE.PlaneBufferGeometry(100, 100)
 
