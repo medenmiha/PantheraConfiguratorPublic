@@ -100,6 +100,9 @@ light.shadow.camera.far = 30
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap
 
+scene.background = new THREE.Color( 0xe0e0e0 )
+scene.fog = new THREE.Fog( 0xe0e0e0, 1, 15 )
+
 
         Sedezi_modro_crni = scene.getObjectByName("Sedezi_modro-crni");
         Sedezi_oranzno_sivo_beli = scene.getObjectByName("Sedezi_oranzno-sivo-beli");
