@@ -8,8 +8,8 @@ import { RoughnessMipmapper } from 'https://threejs.org/examples/jsm/utils/Rough
 var container, controls, controls1;
 var camera, scene, renderer, mixer, clock, camera1;
 var exteriorCamera, interiorCamera, selectedCamera, selectedControls;
-var action1, action2, action3, action4, action5, action6, action7, action8, action9, action10, action11, action12;
-var clip1, clip2, clip3, clip4, clip5, clip6, clip7, clip8, clip9, clip10, clip11, clip12;
+var action1, action2, action3, action4, action5, action6, action7, action8, action9, action10, action11, action12, action13, action14, action15;
+var clip1, clip2, clip3, clip4, clip5, clip6, clip7, clip8, clip9, clip10, clip11, clip12, clip13, clip14, clip15;
 var cameraPosition = { x : 0, y: 0, z: 0 };
 var pogoj = false;
 var podvozjeZunaj = true;
@@ -151,6 +151,15 @@ function ( gltf ) {
         clip12 = gltf.animations[ 11 ];
 		    action12 = mixer.clipAction(clip12);
 
+        clip13 = gltf.animations[ 12 ];
+		    action13 = mixer.clipAction(clip13);
+
+        clip14 = gltf.animations[ 13 ];
+		    action14 = mixer.clipAction(clip14);
+
+        clip15 = gltf.animations[ 14 ];
+		    action15 = mixer.clipAction(clip15);
+
 		  },
 
       function ( xhr ) {
@@ -251,6 +260,24 @@ function podvozjeNot(){
     action12.timeScale = 1;
     action12.setLoop(THREE.LoopOnce, 1);
     action12.play();
+
+    action13.reset();
+    action13.clampWhenFinished = true;
+    action13.timeScale = 1;
+    action13.setLoop(THREE.LoopOnce, 1);
+    action13.play();
+
+    action14.reset();
+    action14.clampWhenFinished = true;
+    action14.timeScale = 1;
+    action14.setLoop(THREE.LoopOnce, 1);
+    action14.play();
+
+    action15.reset();
+    action15.clampWhenFinished = true;
+    action15.timeScale = 1;
+    action15.setLoop(THREE.LoopOnce, 1);
+    action15.play();
   }
 }
 
@@ -282,6 +309,15 @@ function podvozjeVen(){
 
     action12.timeScale = -1;
     action12.paused = false;
+
+    action13.timeScale = -1;
+    action13.paused = false;
+
+    action14.timeScale = -1;
+    action14.paused = false;
+
+    action15.timeScale = -1;
+    action15.paused = false;
   }
 }
 
