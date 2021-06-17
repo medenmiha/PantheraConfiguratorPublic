@@ -62,24 +62,7 @@ if (!isScrollSnapSupported) {
 
 
 //LOGIKA 3D PREMDETA
-new RGBELoader()
-  .setDataType( THREE.UnsignedByteType )
-  .setPath( 'https://threejs.org/examples/textures/equirectangular/' )
-  .load( 'venice_sunset_1k.hdr', function ( texture ) {
 
-    var envMap = pmremGenerator.fromEquirectangular( texture ).texture;
-
-    scene.background = envMap;
-    scene.environment = envMap;
-
-    texture.dispose();
-    pmremGenerator.dispose();
-
-    // model
-
-    // use of RoughnessMipmapper is optional
-
-    } );
 
 var roughnessMipmapper = new RoughnessMipmapper( renderer );
 
