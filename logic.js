@@ -98,6 +98,9 @@ function ( gltf ) {
         
         scene.add( gltf.scene );
 
+        const light = new THREE.AmbientLight( 0x404040 ); // soft white light
+        scene.add( light );
+
 
         Sedezi_modro_crni = scene.getObjectByName("Sedezi_modro-crni");
         Sedezi_oranzno_sivo_beli = scene.getObjectByName("Sedezi_oranzno-sivo-beli");
