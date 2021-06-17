@@ -81,8 +81,8 @@ function ( gltf ) {
         
         scene.add( gltf.scene );
 
-        const light = new THREE.AmbientLight( 0x404040 ); // soft white light
-        scene.add( light );
+        const amblight = new THREE.AmbientLight( 0x404040 ); // soft white light
+        scene.add( amblight );
 
         const light2 = new THREE.PointLight(0xffffff, .5)
 light2.position.set(0, 1, 0)
