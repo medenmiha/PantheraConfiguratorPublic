@@ -192,12 +192,6 @@ function introConfiguration(){
   setTimeout(() => {
     pogoj = false;
   }, 2000)
-
-  action4.reset();
-  action4.clampWhenFinished = true;
-  action4.timeScale = 1;
-  action4.setLoop(THREE.LoopOnce, 1);
-  action4.play();
    
 }
 
@@ -295,10 +289,11 @@ function instrumentConfiguration(){
   cameraLook.y=0;
   cameraLook.z=1;
 
-
-
-
-  
+  action4.reset();
+  action4.clampWhenFinished = true;
+  action4.timeScale = 1;
+  action4.setLoop(THREE.LoopOnce, 1);
+  action4.play();
   
 }
 
