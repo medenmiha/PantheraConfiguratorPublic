@@ -289,8 +289,10 @@ function instrumentConfiguration(){
   cameraLook.y=0;
   cameraLook.z=1;
 
+  action4.reset();
   action4.clampWhenFinished = true;
-  action4.loop = THREE.LoopOnce;
+  action4.timeScale = 1;
+  action4.setLoop(THREE.LoopOnce, 1);
   action4.play();
   
 }
