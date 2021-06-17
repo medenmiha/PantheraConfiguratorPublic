@@ -192,6 +192,9 @@ function introConfiguration(){
   setTimeout(() => {
     pogoj = false;
   }, 2000)
+
+  action4.timeScale = -1;
+  action4.paused = false;
    
 }
 
