@@ -169,33 +169,16 @@ function animate() {
   renderer.render( scene, selectedCamera );
 }
 
-function introConfiguration(){
-
-  pogoj = true;
-  selectedCamera = exteriorCamera;
-
-  cameraLook.x=0;
-  cameraLook.y=0;
-  cameraLook.z=2;
-
-  controls.target.set( 0, 0, 2 );
-
-  var target2 =  { x : -5, y:1.3, z: -5 };
-  cameraPosition.x = selectedCamera.position.x
-  cameraPosition.y = selectedCamera.position.y
-  cameraPosition.z = selectedCamera.position.z
-
-  const tween = new TWEEN.Tween(cameraPosition ).to(target2, 2000); //
-  selectedCamera.aspect = window.innerWidth / window.innerHeight;
-  selectedCamera.updateProjectionMatrix();
-  tween.start();
-  setTimeout(() => {
-    pogoj = false;
-  }, 2000)
-   
+function podvozjeVen(){
+  action4.reset();
+  action4.clampWhenFinished = true;
+  action4.timeScale = 1;
+  action4.setLoop(THREE.LoopOnce, 1);
+  action4.play();
 }
 
-function exteriorConfiguration(){
+
+function introConfiguration(){
 
   pogoj = true;
   selectedCamera = exteriorCamera;
@@ -234,12 +217,6 @@ function seatsConfiguration(){
   action3.clampWhenFinished = true;
   action3.loop = THREE.LoopOnce;
   action3.play();
-
-  action4.reset();
-  action4.clampWhenFinished = true;
-  action4.timeScale = 1;
-  action4.setLoop(THREE.LoopOnce, 1);
-  action4.play();
 
   pogoj = true;
  
@@ -300,11 +277,38 @@ function instrumentConfiguration(){
   
 }
 
+function exteriorConfiguration(){
+
+  pogoj = true;
+  selectedCamera = exteriorCamera;
+
+  cameraLook.x=0;
+  cameraLook.y=0;
+  cameraLook.z=2;
+
+  controls.target.set( 0, 0, 2 );
+
+  var target2 =  { x : -5, y:1.3, z: -5 };
+  cameraPosition.x = selectedCamera.position.x
+  cameraPosition.y = selectedCamera.position.y
+  cameraPosition.z = selectedCamera.position.z
+
+  const tween = new TWEEN.Tween(cameraPosition ).to(target2, 2000); //
+  selectedCamera.aspect = window.innerWidth / window.innerHeight;
+  selectedCamera.updateProjectionMatrix();
+  tween.start();
+  setTimeout(() => {
+    pogoj = false;
+  }, 2000)
+
+  podvozjeVen();
+   
+}
 
 //NAVIGATION BUTTONS
 
-document.getElementById("exteriorSection").onclick = function() {
-  exteriorConfiguration();
+document.getElementById("introSection").onclick = function() {
+  introConfiguration();
 };
 
 document.getElementById("seatsSection").onclick = function() {
@@ -313,6 +317,10 @@ document.getElementById("seatsSection").onclick = function() {
 
 document.getElementById("instrumentSection").onclick = function() {
   instrumentConfiguration();
+};
+
+document.getElementById("exteriorSection").onclick = function() {
+  exteriorConfiguration();
 };
 
 
