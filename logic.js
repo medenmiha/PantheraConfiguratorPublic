@@ -64,6 +64,8 @@ if (!isScrollSnapSupported) {
 
 
 
+var roughnessMipmapper = new RoughnessMipmapper( renderer );
+
 var loader = new GLTFLoader();
 loader.load( 'datoteke/PantheraFinal - 2.gltf', 
 function ( gltf ) {
@@ -82,8 +84,6 @@ function ( gltf ) {
         scene.background = new THREE.Color(0xdddddd);
         hemiLight = new THREE.HemisphereLight(0xffeeb1, 0x080820, 4);
         scene.add(hemiLight);
-
-        
 
 
         Sedezi_modro_crni = scene.getObjectByName("Sedezi_modro-crni");
