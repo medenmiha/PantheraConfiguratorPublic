@@ -15,6 +15,8 @@ var pogoj = false;
 var podvozjeZunaj = true;
 var doorsOpened = false;
 var cameraLook = new THREE.Vector3(0, 0, 0);  //
+var c;
+var hemiLight;
 
 var partsArray = []; //
 
@@ -61,27 +63,6 @@ if (!isScrollSnapSupported) {
 }
 
 
-//LOGIKA 3D PREMDETA
-new RGBELoader()
-  .setDataType( THREE.UnsignedByteType )
-  .setPath( 'datoteke/' )
-  .load( 'small_hangar_01_2k.hdr', function ( texture ) {
-
-    var envMap = pmremGenerator.fromEquirectangular( texture ).texture;
-
-    scene.background = envMap;
-    scene.environment = envMap;
-
-    texture.dispose();
-    pmremGenerator.dispose();
-
-    // model
-
-    // use of RoughnessMipmapper is optional
-
-    } );
-
-var roughnessMipmapper = new RoughnessMipmapper( renderer );
 
 var loader = new GLTFLoader();
 loader.load( 'datoteke/PantheraFinal - 2.gltf', 
@@ -97,6 +78,12 @@ function ( gltf ) {
         } );
         
         scene.add( gltf.scene );
+
+        scene.background = new THREE.Color(0xdddddd);
+        hemiLight = new THREE.HemisphereLight(0xffeeb1, 0x080820, 4);
+        scene.add(hemiLight);
+
+        
 
 
         Sedezi_modro_crni = scene.getObjectByName("Sedezi_modro-crni");
