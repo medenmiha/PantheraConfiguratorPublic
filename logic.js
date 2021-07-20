@@ -98,6 +98,11 @@ function ( gltf ) {
         
         scene.add( gltf.scene );
 
+        const light = new THREE.PointLight( 0xff0000, 1, 100 );
+        light.position.set( 5, 5, 5 );
+        scene.add( light );
+
+
         Sedezi_modro_crni = scene.getObjectByName("Sedezi_modro-crni");
         Sedezi_oranzno_sivo_beli = scene.getObjectByName("Sedezi_oranzno-sivo-beli");
         Sedezi_rdece_crni = scene.getObjectByName("Sedezi_rdece-crni");
