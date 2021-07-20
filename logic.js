@@ -98,9 +98,8 @@ function ( gltf ) {
         
         scene.add( gltf.scene );
 
-        const light = new THREE.PointLight( 0xff0000, 1, 100 );
-        light.position.set( 5, 5, 5 );
-        scene.add( light );
+        hemiLight = new THREE.HemisphereLight(0xffeeb1, 0x080820, 4);
+        scene.add(hemiLight);
 
 
         Sedezi_modro_crni = scene.getObjectByName("Sedezi_modro-crni");
