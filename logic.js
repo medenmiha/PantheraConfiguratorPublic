@@ -20,7 +20,7 @@ var hemiLight;
 
 var partsArray = []; //
 
-var Sedezi_modro_crni, Sedezi_oranzno_sivo_beli, Sedezi_rdece_crni, Sedezi_zeleno_crni;
+var Sedezi_modro_crni, Sedezi_oranzno_sivo_beli, Sedezi_rdece_crni, Sedezi_zeleno_crni, Sphere_;
 
 
 scene = new THREE.Scene();
@@ -106,6 +106,8 @@ function ( gltf ) {
         Sedezi_oranzno_sivo_beli = scene.getObjectByName("Sedezi_oranzno-sivo-beli");
         Sedezi_rdece_crni = scene.getObjectByName("Sedezi_rdece-crni");
         Sedezi_zeleno_crni = scene.getObjectByName("Sedezi_zeleno-crni");
+
+        Sphere_ = scene.getObjectByName("Sphere")
 
         Sedezi_modro_crni.visible = true;
         Sedezi_oranzno_sivo_beli.visible = false;
@@ -483,6 +485,8 @@ function exteriorConfiguration(){
 
   closeDoors();
   doorsOpened = false;
+
+  Sphere_.visible = false;
    
 }
 
