@@ -98,7 +98,7 @@ function ( gltf ) {
         
         scene.add( gltf.scene );
 
-        hemiLight = new THREE.HemisphereLight(0xffeeb1, 0x080820, 1);
+        hemiLight = new THREE.HemisphereLight(0xffeeb1, 0x080820, 0.1);
         scene.add(hemiLight);
 
 
