@@ -62,7 +62,24 @@ if (!isScrollSnapSupported) {
   local.insertBefore(elem, local.firstChild);
 }
 
+new RGBELoader()
+  .setDataType( THREE.UnsignedByteType )
+  .setPath( '' )
+  .load( 'nad_oblaki.jpg', function ( texture ) {
 
+    var envMap = pmremGenerator.fromEquirectangular( texture ).texture;
+
+    scene.background = envMap;
+    scene.environment = envMap;
+
+    texture.dispose();
+    pmremGenerator.dispose();
+
+    // model
+
+    // use of RoughnessMipmapper is optional
+
+    } );
 
 var roughnessMipmapper = new RoughnessMipmapper( renderer );
 
@@ -80,15 +97,6 @@ function ( gltf ) {
         } );
         
         scene.add( gltf.scene );
-
-        scene.background = new THREE.Color(0xdddddd);
-        hemiLight = new THREE.HemisphereLight(0xffeeb1, 0x080820, 4);
-        scene.add(hemiLight);
-
-        const light = new THREE.PointLight( 0xff0000, 1, 100 );
-        light.position.set( 5, 5, 5 );
-        scene.add( light );
-
 
         Sedezi_modro_crni = scene.getObjectByName("Sedezi_modro-crni");
         Sedezi_oranzno_sivo_beli = scene.getObjectByName("Sedezi_oranzno-sivo-beli");
