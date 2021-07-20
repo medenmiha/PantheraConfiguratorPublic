@@ -65,7 +65,7 @@ if (!isScrollSnapSupported) {
 new RGBELoader()
   .setDataType( THREE.UnsignedByteType )
   .setPath( '' )
-  .load( 'nad_oblaki.jpg', function ( texture ) {
+  .load( 'nad_oblaki.hdr', function ( texture ) {
 
     var envMap = pmremGenerator.fromEquirectangular( texture ).texture;
 
