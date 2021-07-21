@@ -16,7 +16,6 @@ var podvozjeZunaj = true;
 var doorsOpened = false;
 var cameraLook = new THREE.Vector3(0, 0, 0);  //
 var c;
-var hemiLight;
 
 var partsArray = []; //
 
@@ -98,8 +97,8 @@ function ( gltf ) {
         
         scene.add( gltf.scene );
 
-        hemiLight = new THREE.HemisphereLight(0xffeeb1, 0x080820, 0.1);
-        scene.add(hemiLight);
+        const light = new THREE.AmbientLight( 0x404040 ); // soft white light
+        scene.add( light )
 
 
         Sedezi_modro_crni = scene.getObjectByName("Sedezi_modro-crni");
