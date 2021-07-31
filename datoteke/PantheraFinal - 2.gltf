@@ -478,18 +478,7 @@
         },
         {
             "mesh" : 46,
-            "name" : "Sphere",
-            "rotation" : [
-                -0.024157248437404633,
-                -0.0015154783613979816,
-                -0.0016267506871372461,
-                0.9997057914733887
-            ],
-            "translation" : [
-                5.435177081380971e-05,
-                0.016330838203430176,
-                -0.0006187846884131432
-            ]
+            "name" : "Sphere"
         }
     ],
     "animations" : [
@@ -1931,9 +1920,9 @@
             "uri" : "Sedezi_zeleno-crni_t.jpg"
         },
         {
-            "mimeType" : "image/png",
-            "name" : "Sphere_haha",
-            "uri" : "Sphere_haha.png"
+            "mimeType" : "image/jpeg",
+            "name" : "Okolica",
+            "uri" : "Okolica.jpg"
         }
     ],
     "accessors" : [
@@ -3408,29 +3397,29 @@
         {
             "bufferView" : 163,
             "componentType" : 5126,
-            "count" : 1087,
+            "count" : 1120,
             "max" : [
-                30.00001335144043,
-                31.89870834350586,
-                30.000022888183594
+                30.006084442138672,
+                31.877641677856445,
+                29.872554779052734
             ],
             "min" : [
-                -30,
-                -1.3329640626907349,
-                -30
+                -29.99333381652832,
+                -1.7902311086654663,
+                -30.05716323852539
             ],
             "type" : "VEC3"
         },
         {
             "bufferView" : 164,
             "componentType" : 5126,
-            "count" : 1087,
+            "count" : 1120,
             "type" : "VEC3"
         },
         {
             "bufferView" : 165,
             "componentType" : 5126,
-            "count" : 1087,
+            "count" : 1120,
             "type" : "VEC2"
         },
         {
@@ -4372,113 +4361,113 @@
         },
         {
             "buffer" : 0,
-            "byteLength" : 13044,
+            "byteLength" : 13440,
             "byteOffset" : 4173972
         },
         {
             "buffer" : 0,
-            "byteLength" : 13044,
-            "byteOffset" : 4187016
+            "byteLength" : 13440,
+            "byteOffset" : 4187412
         },
         {
             "buffer" : 0,
-            "byteLength" : 8696,
-            "byteOffset" : 4200060
+            "byteLength" : 8960,
+            "byteOffset" : 4200852
         },
         {
             "buffer" : 0,
             "byteLength" : 11904,
-            "byteOffset" : 4208756
+            "byteOffset" : 4209812
         },
         {
             "buffer" : 0,
             "byteLength" : 160,
-            "byteOffset" : 4220660
+            "byteOffset" : 4221716
         },
         {
             "buffer" : 0,
             "byteLength" : 640,
-            "byteOffset" : 4220820
+            "byteOffset" : 4221876
         },
         {
             "buffer" : 0,
             "byteLength" : 640,
-            "byteOffset" : 4221460
+            "byteOffset" : 4222516
         },
         {
             "buffer" : 0,
             "byteLength" : 640,
-            "byteOffset" : 4222100
+            "byteOffset" : 4223156
         },
         {
             "buffer" : 0,
             "byteLength" : 640,
-            "byteOffset" : 4222740
+            "byteOffset" : 4223796
         },
         {
             "buffer" : 0,
             "byteLength" : 44,
-            "byteOffset" : 4223380
+            "byteOffset" : 4224436
         },
         {
             "buffer" : 0,
             "byteLength" : 176,
-            "byteOffset" : 4223424
+            "byteOffset" : 4224480
         },
         {
             "buffer" : 0,
             "byteLength" : 176,
-            "byteOffset" : 4223600
+            "byteOffset" : 4224656
         },
         {
             "buffer" : 0,
             "byteLength" : 640,
-            "byteOffset" : 4223776
+            "byteOffset" : 4224832
         },
         {
             "buffer" : 0,
             "byteLength" : 640,
-            "byteOffset" : 4224416
+            "byteOffset" : 4225472
         },
         {
             "buffer" : 0,
             "byteLength" : 640,
-            "byteOffset" : 4225056
+            "byteOffset" : 4226112
         },
         {
             "buffer" : 0,
             "byteLength" : 640,
-            "byteOffset" : 4225696
+            "byteOffset" : 4226752
         },
         {
             "buffer" : 0,
             "byteLength" : 640,
-            "byteOffset" : 4226336
+            "byteOffset" : 4227392
         },
         {
             "buffer" : 0,
             "byteLength" : 640,
-            "byteOffset" : 4226976
+            "byteOffset" : 4228032
         },
         {
             "buffer" : 0,
             "byteLength" : 640,
-            "byteOffset" : 4227616
+            "byteOffset" : 4228672
         },
         {
             "buffer" : 0,
             "byteLength" : 640,
-            "byteOffset" : 4228256
+            "byteOffset" : 4229312
         },
         {
             "buffer" : 0,
             "byteLength" : 640,
-            "byteOffset" : 4228896
+            "byteOffset" : 4229952
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 4229536,
+            "byteLength" : 4230592,
             "uri" : "PantheraFinal - 2.bin"
         }
     ]
