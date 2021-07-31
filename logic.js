@@ -578,6 +578,13 @@ animate();
       Sedezi_rdece_crni.visible = true;
       Sedezi_zeleno_crni.visible = false;
     }
+
+    if(slideIndex==4){
+      Sedezi_modro_crni.visible = false;
+      Sedezi_oranzno_sivo_beli.visible = false;
+      Sedezi_rdece_crni.visible = false;
+      Sedezi_zeleno_crni.visible = true;
+    }
   }
 
   
