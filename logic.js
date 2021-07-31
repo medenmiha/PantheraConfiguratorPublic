@@ -26,8 +26,8 @@ scene = new THREE.Scene();
 clock = new THREE.Clock();
 
 //CAMERAS
-exteriorCamera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.25, 20 );
-interiorCamera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.25, 20 );
+exteriorCamera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.25, 100 );
+interiorCamera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.25, 100 );
 
 selectedCamera = exteriorCamera;
 
@@ -39,7 +39,7 @@ renderer.setPixelRatio( window.devicePixelRatio );
 renderer.setSize( window.innerWidth, window.innerHeight );
 renderer.toneMapping = THREE.ACESFilmicToneMapping;  //komot brises
 renderer.toneMappingExposure = 1;  //komot brises
-//renderer.outputEncoding = THREE.sRGBEncoding;
+renderer.outputEncoding = THREE.sRGBEncoding; //ful temnejs ce zbrises
 container.appendChild( renderer.domElement );
 
 controls = new OrbitControls( selectedCamera, renderer.domElement );
