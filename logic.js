@@ -38,7 +38,7 @@ renderer = new THREE.WebGLRenderer( { antialias: false } );  //true
 renderer.setPixelRatio( window.devicePixelRatio );
 renderer.setSize( window.innerWidth, window.innerHeight );
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
-renderer.toneMappingExposure = 0.8;
+renderer.toneMappingExposure = 2;
 renderer.outputEncoding = THREE.sRGBEncoding;
 container.appendChild( renderer.domElement );
 
