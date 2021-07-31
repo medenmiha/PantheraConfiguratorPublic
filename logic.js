@@ -37,9 +37,9 @@ document.body.appendChild( container );
 renderer = new THREE.WebGLRenderer( { antialias: false } );  //true
 renderer.setPixelRatio( window.devicePixelRatio );
 renderer.setSize( window.innerWidth, window.innerHeight );
-renderer.toneMapping = THREE.ACESFilmicToneMapping;
-renderer.toneMappingExposure = 1;
-renderer.outputEncoding = THREE.sRGBEncoding;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;  //komot brises
+renderer.toneMappingExposure = 1;  //komot brises
+//renderer.outputEncoding = THREE.sRGBEncoding;
 container.appendChild( renderer.domElement );
 
 controls = new OrbitControls( selectedCamera, renderer.domElement );
