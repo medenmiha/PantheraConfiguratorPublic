@@ -400,7 +400,7 @@ function seatsConfiguration(){
   pogoj = true;
  
 
-  var target1 =  { x : -0.73, y: 0.41, z: 2.1 };
+  var target1 =  { x : -0.93, y: 0.6, z: 1.6 };
   cameraPosition.x = selectedCamera.position.x
   cameraPosition.y = selectedCamera.position.y
   cameraPosition.z = selectedCamera.position.z
@@ -416,11 +416,14 @@ function seatsConfiguration(){
   controls = new OrbitControls( selectedCamera, renderer.domElement );
   controls.minDistance = 0.5;
   controls.maxDistance = 5
-  controls.target.set( 0, 0, 2.5);
+  controls.target.set( 0, 0, 2);
 	
   cameraLook.x=0;
   cameraLook.y=0;
-  cameraLook.z=2.5;
+  cameraLook.z=2;
+
+  podvozjeVen();
+  podvozjeZunaj = true;
 
   openDoors();
   doorsOpened = true;
@@ -453,6 +456,10 @@ function instrumentConfiguration(){
   cameraLook.x=0;
   cameraLook.y=0;
   cameraLook.z=1;
+
+
+  podvozjeVen();
+  podvozjeZunaj = true;
   
 }
 
@@ -480,6 +487,42 @@ function exteriorConfiguration(){
     pogoj = false;
   }, 2000)
 
+  podvozjeVen();
+  podvozjeZunaj = true;
+
+  closeDoors();
+  doorsOpened = false;
+   
+}
+
+
+function configuratuionResult(){
+
+  pogoj = true;
+  selectedCamera = exteriorCamera;
+
+  cameraLook.x=0;
+  cameraLook.y=0;
+  cameraLook.z=2;
+
+  controls.target.set( 0, 0, 2 );
+
+  var target2 =  { x : -5, y:1.3, z: -5 };
+  cameraPosition.x = selectedCamera.position.x
+  cameraPosition.y = selectedCamera.position.y
+  cameraPosition.z = selectedCamera.position.z
+
+  const tween = new TWEEN.Tween(cameraPosition ).to(target2, 2000); //
+  selectedCamera.aspect = window.innerWidth / window.innerHeight;
+  selectedCamera.updateProjectionMatrix();
+  tween.start();
+  setTimeout(() => {
+    pogoj = false;
+  }, 2000)
+
+  podvozjeVen();
+  podvozjeZunaj = true;
+
   podvozjeNot();
   podvozjeZunaj=false;
 
@@ -489,6 +532,7 @@ function exteriorConfiguration(){
   Sphere_.visible = false;
    
 }
+
 
 //NAVIGATION BUTTONS
 
@@ -506,6 +550,10 @@ document.getElementById("instrumentSection").onclick = function() {
 
 document.getElementById("exteriorSection").onclick = function() {
   exteriorConfiguration();
+};
+
+document.getElementById("resultSection").onclick = function() {
+  configuratuionResult();
 };
 
 
