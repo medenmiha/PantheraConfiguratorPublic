@@ -415,6 +415,7 @@ function seatsConfiguration(){
   controls = new OrbitControls( selectedCamera, renderer.domElement );
   controls.minDistance = 0.5;
   controls.maxDistance = 5
+  controls.maxPolarAngle = Math.PI/2; 
   controls.target.set( 0, 0, 2.5);
 	
   cameraLook.x=0;
