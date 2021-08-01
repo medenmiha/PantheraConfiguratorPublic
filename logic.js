@@ -45,7 +45,7 @@ container.appendChild( renderer.domElement );
 controls = new OrbitControls( selectedCamera, renderer.domElement );
 controls.maxPolarAngle = Math.PI/2; 
 controls.minDistance = 2;
-controls.maxDistance = 10
+controls.maxDistance = 20;
 controls.target.set( 0, 0, 0 );
 
 // NAVIGACIJA SPLETNE STRANI
