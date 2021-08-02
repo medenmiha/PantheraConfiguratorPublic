@@ -7,7 +7,7 @@ import { RoughnessMipmapper } from 'https://threejs.org/examples/jsm/utils/Rough
 
 var container, controls, controls1;
 var camera, scene, renderer, mixer, clock, camera1;
-var exteriorCamera, interiorCamera, selectedCamera;
+var exteriorCamera, interiorCamera, selectedCamera, selectedControls;
 var action1, action2, action3, action4, action5, action6, action7, action8, action9, action10, action11, action12, action13, action14, action15;
 var clip1, clip2, clip3, clip4, clip5, clip6, clip7, clip8, clip9, clip10, clip11, clip12, clip13, clip14, clip15;
 var cameraPosition = { x : 0, y: 0, z: 0 };
@@ -103,20 +103,25 @@ function ( gltf ) {
 
 
         Sedezi_modro_crni = scene.getObjectByName("Sedezi_modro-crni");
+        Sedezi_modro_crni.layers.set(1);
+
         Sedezi_oranzno_sivo_beli = scene.getObjectByName("Sedezi_oranzno-sivo-beli");
+        Sedezi_oranzno_sivo_beli.layers.set(2);
+
         Sedezi_rdece_crni = scene.getObjectByName("Sedezi_rdece-crni");
+        Sedezi_rdece_crni.layers.set(3);
+
         Sedezi_zeleno_crni = scene.getObjectByName("Sedezi_zeleno-crni");
+        Sedezi_zeleno_crni.layers.set(4);
 
         Sphere_ = scene.getObjectByName("Sphere")
 
-        Sedezi_modro_crni.visible = true;
-        Sedezi_oranzno_sivo_beli.visible = false;
-        Sedezi_rdece_crni.visible = false;
-        Sedezi_zeleno_crni.visible = false;
+        selectedCamera.layers.enable(1);
 
-        Sphere_.visible = true;
-
-      
+        //Sedezi_modro_crni.visible = true;
+        //Sedezi_oranzno_sivo_beli.visible = false;
+        //Sedezi_rdece_crni.visible = false;
+        //Sedezi_zeleno_crni.visible = false;
 
 
 
@@ -395,6 +400,7 @@ function introConfiguration(){
 
   closeDoors();
   doorsOpened = false;
+
    
 }
 
@@ -495,6 +501,7 @@ function exteriorConfiguration(){
 
   closeDoors();
   doorsOpened = false;
+
    
 }
 
@@ -611,31 +618,47 @@ animate();
     dots[slideIndex-1].className += " active";
 
     if(slideIndex==1){
-      Sedezi_modro_crni.visible = true;
-      Sedezi_oranzno_sivo_beli.visible = false;
-      Sedezi_rdece_crni.visible = false;
-      Sedezi_zeleno_crni.visible = false;
+      selectedCamera.layers.enable(1);
+      selectedCamera.layers.disable(2);
+      selectedCamera.layers.disable(3);
+      selectedCamera.layers.disable(4);
+      //Sedezi_modro_crni.visible = true;
+      //Sedezi_oranzno_sivo_beli.visible = false;
+      //Sedezi_rdece_crni.visible = false;
+      //Sedezi_zeleno_crni.visible = false;
     }
 
     if(slideIndex==2){
-      Sedezi_modro_crni.visible = false;
-      Sedezi_oranzno_sivo_beli.visible = true;
-      Sedezi_rdece_crni.visible = false;
-      Sedezi_zeleno_crni.visible = false;
+      selectedCamera.layers.disable(1);
+      selectedCamera.layers.enable(2);
+      selectedCamera.layers.disable(3);
+      selectedCamera.layers.disable(4);
+      //Sedezi_modro_crni.visible = false;
+      //Sedezi_oranzno_sivo_beli.visible = true;
+      //Sedezi_rdece_crni.visible = false;
+      //Sedezi_zeleno_crni.visible = false;
     }
 
     if(slideIndex==3){
-      Sedezi_modro_crni.visible = false;
-      Sedezi_oranzno_sivo_beli.visible = false;
-      Sedezi_rdece_crni.visible = true;
-      Sedezi_zeleno_crni.visible = false;
+      selectedCamera.layers.disable(1);
+      selectedCamera.layers.disable(2);
+      selectedCamera.layers.enable(3);
+      selectedCamera.layers.disable(4);
+      //Sedezi_modro_crni.visible = false;
+      //Sedezi_oranzno_sivo_beli.visible = false;
+      //Sedezi_rdece_crni.visible = true;
+      //Sedezi_zeleno_crni.visible = false;
     }
 
     if(slideIndex==4){
-      Sedezi_modro_crni.visible = false;
-      Sedezi_oranzno_sivo_beli.visible = false;
-      Sedezi_rdece_crni.visible = false;
-      Sedezi_zeleno_crni.visible = true;
+      selectedCamera.layers.disable(1);
+      selectedCamera.layers.disable(2);
+      selectedCamera.layers.disable(3);
+      selectedCamera.layers.enable(4);
+      //Sedezi_modro_crni.visible = false;
+      //Sedezi_oranzno_sivo_beli.visible = false;
+      //Sedezi_rdece_crni.visible = false;
+      //Sedezi_zeleno_crni.visible = true;
     }
   }
 
