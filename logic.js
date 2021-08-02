@@ -7,7 +7,7 @@ import { RoughnessMipmapper } from 'https://threejs.org/examples/jsm/utils/Rough
 
 var container, controls, controls1;
 var camera, scene, renderer, mixer, clock, camera1;
-var exteriorCamera, interiorCamera, selectedCamera, selectedControls;
+var exteriorCamera, interiorCamera, selectedCamera;
 var action1, action2, action3, action4, action5, action6, action7, action8, action9, action10, action11, action12, action13, action14, action15;
 var clip1, clip2, clip3, clip4, clip5, clip6, clip7, clip8, clip9, clip10, clip11, clip12, clip13, clip14, clip15;
 var cameraPosition = { x : 0, y: 0, z: 0 };
@@ -113,6 +113,8 @@ function ( gltf ) {
         Sedezi_oranzno_sivo_beli.visible = false;
         Sedezi_rdece_crni.visible = false;
         Sedezi_zeleno_crni.visible = false;
+
+        Sphere_.visible = true;
 
 
 
