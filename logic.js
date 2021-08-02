@@ -115,8 +115,7 @@ function ( gltf ) {
         Sedezi_zeleno_crni.layers.set(4);
 
         Sphere_ = scene.getObjectByName("Sphere")
-
-        selectedCamera.layers.enable(1);
+        Sphere_.layers.set(5);
 
         //Sedezi_modro_crni.visible = true;
         //Sedezi_oranzno_sivo_beli.visible = false;
@@ -401,6 +400,8 @@ function introConfiguration(){
   closeDoors();
   doorsOpened = false;
 
+  selectedCamera.layers.enable(5);
+
    
 }
 
@@ -438,6 +439,8 @@ function seatsConfiguration(){
   doorsOpened = true;
 
   selectedCamera.layers.enable(1);
+
+  selectedCamera.layers.enable(5);
   
 }
 
@@ -471,6 +474,8 @@ function instrumentConfiguration(){
 
   podvozjeVen();
   podvozjeZunaj = true;
+
+  selectedCamera.layers.enable(5);
   
 }
 
@@ -503,6 +508,8 @@ function exteriorConfiguration(){
 
   closeDoors();
   doorsOpened = false;
+
+  selectedCamera.layers.enable(5);
 
    
 }
@@ -541,7 +548,7 @@ function configuratuionResult(){
   closeDoors();
   doorsOpened = false;
 
-  Sphere_.visible = false;
+  selectedCamera.layers.disable(5);
    
 }
 
