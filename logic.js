@@ -114,7 +114,7 @@ function ( gltf ) {
         Sedezi_rdece_crni.visible = false;
         Sedezi_zeleno_crni.visible = false;
 
-        Sphere_.visible = true;
+      
 
 
 
