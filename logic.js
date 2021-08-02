@@ -395,9 +395,6 @@ function introConfiguration(){
 
   closeDoors();
   doorsOpened = false;
-
-  Sphere_.visible = true;
-
    
 }
 
@@ -433,8 +430,6 @@ function seatsConfiguration(){
 
   openDoors();
   doorsOpened = true;
-
-  Sphere_.visible = true;
   
 }
 
@@ -468,8 +463,6 @@ function instrumentConfiguration(){
 
   podvozjeVen();
   podvozjeZunaj = true;
-
-  Sphere_.visible = true;
   
 }
 
@@ -502,8 +495,6 @@ function exteriorConfiguration(){
 
   closeDoors();
   doorsOpened = false;
-
-  Sphere_.visible = true;
    
 }
 
