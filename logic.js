@@ -449,7 +449,7 @@ function instrumentConfiguration(){
   
   pogoj = true;
 
-  var target1 =  { x : 0.5, y: 0.5, z: 0.62 };
+  var target1 =  { x : 0, y: 0.4, z: 1.7 };
   cameraPosition.x = selectedCamera.position.x
   cameraPosition.y = selectedCamera.position.y
   cameraPosition.z = selectedCamera.position.z
