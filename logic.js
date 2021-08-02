@@ -375,6 +375,7 @@ function introConfiguration(){
 
   pogoj = true;
   selectedCamera = exteriorCamera;
+  selectedCamera.layers.enable(1);
 
   cameraLook.x=0;
   cameraLook.y=0;
@@ -415,13 +416,13 @@ function seatsConfiguration(){
   cameraPosition.z = selectedCamera.position.z
   const tween = new TWEEN.Tween(cameraPosition ).to(target1, 2000); //
   selectedCamera.aspect = window.innerWidth / window.innerHeight;
+  selectedCamera.fov= 75;
   selectedCamera.updateProjectionMatrix();
   tween.start();
   setTimeout(() => {
     pogoj = false;
   }, 2000)
 
-  selectedCamera = interiorCamera;
   controls = new OrbitControls( selectedCamera, renderer.domElement );
   controls.minDistance = 0.5;
   controls.maxDistance = 5
