@@ -114,6 +114,8 @@ function ( gltf ) {
         Sedezi_rdece_crni.visible = false;
         Sedezi_zeleno_crni.visible = false;
 
+        Sphere_.visible = true;
+
       
 
 
@@ -394,6 +396,8 @@ function introConfiguration(){
   closeDoors();
   doorsOpened = false;
 
+  Sphere_.visible = true;
+
    
 }
 
@@ -429,6 +433,8 @@ function seatsConfiguration(){
 
   openDoors();
   doorsOpened = true;
+
+  Sphere_.visible = true;
   
 }
 
@@ -462,6 +468,8 @@ function instrumentConfiguration(){
 
   podvozjeVen();
   podvozjeZunaj = true;
+
+  Sphere_.visible = true;
   
 }
 
@@ -494,6 +502,8 @@ function exteriorConfiguration(){
 
   closeDoors();
   doorsOpened = false;
+
+  Sphere_.visible = true;
    
 }
 
