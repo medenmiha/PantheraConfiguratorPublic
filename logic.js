@@ -558,8 +558,7 @@ function configuratuionResult(){
   //action1.clampWhenFinished = true;
   //action1.timeScale = 1;
   action16.setLoop(THREE.LoopRepeat, 1000);
-    action16.play();
-   
+  action16.play();
 }
 
 
