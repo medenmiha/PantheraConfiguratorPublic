@@ -177,6 +177,7 @@ function ( gltf ) {
         //propeler
         clip16 = gltf.animations[ 15 ];
 		    action16 = mixer.clipAction(clip16);
+        action16.setLoop(THREE.LoopRepeat, 1000);
 
 		  },
 
@@ -405,9 +406,6 @@ function introConfiguration(){
   doorsOpened = false;
 
   selectedCamera.layers.enable(5);
-
-  action16.setLoop(THREE.LoopRepeat, 1000);
-  action16.stop();
 
    
 }
