@@ -406,6 +406,7 @@ function introConfiguration(){
 
   selectedCamera.layers.enable(5);
 
+  action16.setLoop(THREE.LoopRepeat, 1000);
   action16.stop();
 
    
@@ -565,7 +566,6 @@ function configuratuionResult(){
   //action16.reset();
   //action1.clampWhenFinished = true;
   //action1.timeScale = 1;
-  action16.setLoop(THREE.LoopRepeat, 1000);
   action16.play();
 }
 
