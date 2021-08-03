@@ -406,6 +406,8 @@ function introConfiguration(){
 
   selectedCamera.layers.enable(5);
 
+  action16.stop();
+
    
 }
 
@@ -445,6 +447,8 @@ function seatsConfiguration(){
   selectedCamera.layers.enable(1);
 
   selectedCamera.layers.enable(5);
+
+  action16.stop();
   
 }
 
@@ -480,6 +484,8 @@ function instrumentConfiguration(){
   podvozjeZunaj = true;
 
   selectedCamera.layers.enable(5);
+
+  action16.stop();
   
 }
 
