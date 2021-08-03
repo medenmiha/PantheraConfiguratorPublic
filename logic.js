@@ -515,6 +515,8 @@ function exteriorConfiguration(){
 
   selectedCamera.layers.enable(5);
 
+  action16.stop();
+
    
 }
 
